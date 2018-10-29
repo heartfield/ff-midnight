@@ -9,7 +9,7 @@
   "icons": {
     "48": "icons/icon.svg",
     "96": "icons/icon.svg"
-  }
+  },
 
   "content_scripts": [
     {
@@ -24,5 +24,11 @@
     "page": "options.html",
     "browser_style": true
   },
+
+  "applications": {
+    "gecko": {
+      "id": "heartfield@gmail.com",
+    }
+  }
 
 }
