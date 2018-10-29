@@ -1,0 +1,20 @@
+{
+
+  "manifest_version": 2,
+  "name": "FF-midnight",
+  "version": "1.0",
+
+  "description": "Todo",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["ff-midnight.js"]
+    }
+  ]
+
+}
