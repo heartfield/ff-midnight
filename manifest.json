@@ -7,8 +7,9 @@
   "description": "Todo",
 
   "icons": {
-    "48": "icons/icon.svg"
-  },
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
+  }
 
   "content_scripts": [
     {
