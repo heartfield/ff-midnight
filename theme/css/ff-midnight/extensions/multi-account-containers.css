@@ -1,0 +1,237 @@
+/* ###############################################################
+//
+// Firefox Multi-account Containers Extension
+//
+// ###############################################################
+//
+// Required configuration: 
+// 1. Find and Copy the UUID of your Multi-account Containers on the URL about:debugging#addons
+// 2. Replace the UUID code below in "moz-extension://UUID/" with your UUID:
+// 3. Optional: Select a tab indicator style in ff-midnight-userchrome.css
+//
+// #############################################################*/
+
+
+@-moz-document url-prefix("moz-extension://effefc15-b9d6-5d47-9945-965d3a741ba3/") {
+
+  :root {
+    --primary-action-color: var(--ff-midnight-color-accent) !important;
+    --title-text-color: var(--ff-midnight-color-base10) !important;
+    --text-normal-color: var(--ff-midnight-color-base30) !important;
+    --text-heading-color: var(--ff-midnight-color-base10) !important;
+  }
+
+  html,
+  body {
+    background-color: var(--ff-midnight-color-base) !important;
+  }
+  
+  .scrollable {
+    border-block-start: 1px solid var(--ff-midnight-color-base95) !important;
+  }
+  
+  .button {
+    color: var(--ff-midnight-color-base0) !important;
+  }
+  
+  .button.primary {
+    background-color: var(--ff-midnight-color-accent) !important;
+    color: var(--ff-midnight-color-base) !important;
+  }
+  
+  .button.primary:hover,
+  .button.primary:focus {
+    background-color: var(--ff-midnight-color-accent-dark) !important;
+  }
+  
+  .button.secondary:hover,
+  .button.secondary:focus {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .panel-back-arrow {
+    background: var(--ff-midnight-color-base92) !important;
+    box-shadow: inset -2px 0 4px -2px rgba(0, 0, 0, 0.4);
+  }
+  
+  .panel-back-arrow:hover,
+  .panel-back-arrow:focus {
+    background: var(--ff-midnight-color-base90) !important;
+  }
+  
+  .back-arrow-img {
+    filter: invert(65%)!important
+  }
+  
+  .onboarding-title {
+    color: var(--ff-midnight-color-base50) !important;
+  }
+
+  .onboarding-button {
+    background-color: var(--ff-midnight-color-accent) !important;
+    color: var(--ff-midnight-color-base) !important;
+  }
+  
+  .onboarding-button:hover,
+  .onboarding-button:active {
+    background-color: var(--ff-midnight-color-accent-dark) !important;
+  }
+  
+  #container-panel .panel-header {
+    background-color: var(--ff-midnight-color-base110) !important;
+  }
+  
+  #container-panel .panel-header-text {
+    color: var(--ff-midnight-color-base50) !important;
+  }
+
+  #container-panel #sort-containers-link {
+    border: 1px solid var(--ff-midnight-color-base70) !important;
+  }
+  
+  #container-panel #sort-containers-link:hover,
+  #container-panel #sort-containers-link:focus {
+    background: var(--ff-midnight-color-base90) !important;
+  }
+  
+  #current-tab > label > input {
+    border: 1px solid var(--ff-midnight-color-base70) !important;
+  }
+  
+  #current-tab > label > input:checked {
+    filter: invert(100%);
+    border-color: var(--ff-midnight-color-base70) !important
+  }
+  
+  #current-tab > label > input[disabled] {
+    background-color: var(--ff-midnight-color-base95) !important;
+  }  
+  
+  .container-panel-row {
+    background-color: var(--ff-midnight-color-base95) !important;
+    border-block-end: 1px solid var(--ff-midnight-color-base92) !important;
+  }  
+
+  .container-panel-row:hover .clickable.userContext-wrapper,
+  .container-panel-row:focus .clickable.userContext-wrapper {
+    background: var(--ff-midnight-color-base92) !important;
+  }
+  
+  .container-panel-row:hover .clickable .usercontext-icon,
+  .container-panel-row:focus .clickable .usercontext-icon,
+  .container-panel-row .clickable:focus .usercontext-icon {
+    fill: var(--ff-midnight-color-base30) !important;
+  }
+  
+  .container-panel-row .clickable:hover .usercontext-icon,
+  .container-panel-row .clickable:focus .usercontext-icon {
+    fill: var(--ff-midnight-color-accent) !important;
+  }
+  
+  .container-name,
+  legend {
+    color: var(--ff-midnight-color-base30) !important;
+  }
+
+  .panel-footer {
+    background: var(--ff-midnight-color-base110) !important;
+    border-block-end: 1px solid var(--ff-midnight-color-base90) !important;
+    color: var(--ff-midnight-color-base30) !important;
+  }
+  
+  .edit-containers-text {
+    border-inline-end: solid 1px var(--ff-midnight-color-base90) !important;
+  }
+  
+  .edit-containers-text a {
+    color: var(--ff-midnight-color-base10) !important;
+  }
+  
+  .edit-container-panel input[type=text] {
+    background: var(--ff-midnight-color-base) !important;
+    color: var(--ff-midnight-color-base10) !important;
+    border: 1px solid var(--ff-midnight-color-base70) !important;
+  }
+  
+  .edit-container-panel input[type=text]:focus {
+    color: var(--ff-midnight-color-base90) !important;
+  }
+  
+  .clickable:hover,
+  .clickable:focus {
+    background-color: var(--ff-midnight-color-base90) !important;
+  }
+  
+  .edit-containers-exit-text {
+    color: var(--ff-midnight-color-base110) !important;
+  }
+  
+  .exit-edit-mode-link::before {
+    filter: none !important;
+  }
+  
+  .delete-container-confirm-title {
+    color: var(--ff-midnight-color-base10) !important;
+  }
+  
+  .radio-choice > .radio-container > [type="radio"]:checked + label {
+    background: var(--ff-midnight-color-base80) !important;
+  }
+  
+  .radio-choice > .radio-container > [type="radio"]:focus + label {
+    outline: 1px solid var(--ff-midnight-color-accent) !important;
+  }
+  
+  .cta {
+    color: var(--ff-midnight-color-base) !important;
+  }
+
+  .container-notification {
+    background: var(--ff-midnight-color-base95) !important;
+    color: var(--ff-midnight-color-base10) !important;
+  }
+  
+  .pop-button-image {
+    filter: invert(65%);
+  }
+  
+  [data-identity-color=grey] {
+    --identity-icon-color: var(--ff-midnight-color-base30) !important;
+  } 
+
+  /* confirm page */
+  
+  .title-text,
+  body {
+    color: var(--ff-midnight-color-base30) !important;
+  }
+  
+  #redirect-url {
+    background: var(--ff-midnight-color-base95) !important;
+  }
+  
+  button#deny {
+    background: var(--ff-midnight-color-base) !important;
+    border-color: var(--ff-midnight-color-base70) !important;
+    color: var(--ff-midnight-color-base30) !important;
+  }
+  
+  button#deny:hover {
+    background: var(--ff-midnight-color-base92) !important;
+    color: var(--ff-midnight-color-base10) !important;
+  }
+  
+  #never-ask {
+    -moz-appearance: none !important;
+    background-color: var(--ff-midnight-color-base95) !important;
+    border-color: var(--ff-midnight-color-base70) !important;
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+  
+  #never-ask:checked {
+    background-image: url(chrome://global/skin/in-content/check.svg) !important;
+    background-color: var(--ff-midnight-color-base95) !important;
+  }
+
+}

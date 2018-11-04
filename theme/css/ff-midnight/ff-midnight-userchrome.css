@@ -1,0 +1,472 @@
+/* ---------------------------------------------------------------
+// Customized color variables
+// -------------------------------------------------------------*/
+
+:root { 
+  
+  /* general */
+  --chrome-color: var(--ff-midnight-color-base10) !important;
+  --chrome-background-color: var(--ff-midnight-color-base120) !important;
+  --chrome-secondary-background-color: var(--ff-midnight-color-base) !important;
+  --toolbox-border-bottom-color: var(--ff-midnight-color-base120) !important;
+  --chrome-nav-bar-controls-border-color: var(--ff-midnight-color-base30) !important;
+  --chrome-selection-color: var(--ff-midnight-color-base0) !important;
+  --chrome-selection-background-color: var(--ff-midnight-color-base120) !important;
+  
+  /* toolbar button background */
+  --toolbarbutton-hover-background: var(--ff-midnight-color-base70) !important;
+  --lwt-toolbarbutton-hover-background: var(--ff-midnight-color-base70) !important;
+  --toolbarbutton-active-background: var(--ff-midnight-color-base50) !important;
+  --lwt-toolbarbutton-active-background: var(--ff-midnight-color-base50) !important;
+  
+  /* toolbar icon attention color */
+  --lwt-toolbarbutton-icon-fill-attention: var(--ff-midnight-color-accent) !important;
+  --toolbarbutton-icon-fill-attention: var(--ff-midnight-color-accent) !important;
+  
+  /* urlbar */
+  --lwt-toolbar-field-color: var(--chrome-color);
+  --toolbar-field-background-color: var(--ff-midnight-color-base) !important;
+  --lwt-toolbar-field-background-color: var(--ff-midnight-color-base) !important;
+  --toolbar-field-focus: var(--ff-midnight-color-base92) !important;
+  --lwt-toolbar-field-focus: var(--ff-midnight-color-base92) !important;
+  --toolbar-field-border-color: var(--ff-midnight-color-base) !important;
+  --lwt-toolbar-field-border-color: var(--ff-midnight-color-base) !important;
+  --toolbar-field-focus-border-color: var(--ff-midnight-color-base) !important;
+  --lwt-toolbar-field-focus-border-color: var(--ff-midnight-color-base) !important;
+  --urlbar-separator-color: var(--ff-midnight-color-base70) !important;
+
+  /* autocomplete popup */
+  --autocomplete-popup-color: var(--ff-midnight-color-base30) !important;
+  --autocomplete-popup-background: var(--ff-midnight-color-base) !important;
+  --autocomplete-popup-highlight-background: var(--ff-midnight-color-base120) !important;
+  --urlbar-popup-url-color: var(--ff-midnight-color-accent) !important;
+  
+  /* dropdown popups */
+  --lwt-accent-color: var(--ff-midnight-color-base120) !important;
+  --lwt-text-color: var(--ff-midnight-color-base10) !important;
+  --panel-disabled-color: var(--ff-midnight-color-base50) !important;
+  --arrowpanel-background: var(--ff-midnight-color-base) !important;
+  --arrowpanel-color: var(--ff-midnight-color-base10) !important;
+  --arrowpanel-border-color: var(--ff-midnight-color-base92) !important;
+  
+  --tab-line-color: var(--ff-midnight-color-accent) !important;  
+}
+
+
+/* ---------------------------------------------------------------
+// Toolbar Tabs
+// -------------------------------------------------------------*/
+
+/* tab hover */
+#TabsToolbar[brighttext] > #tabbrowser-tabs > .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]) {
+  background-color: var(--ff-midnight-color-base95) !important;
+}
+
+#TabsToolbar, #navigator-toolbox {
+  color: var(--ff-midnight-color-base30) !important;
+}
+
+#TabsToolbar .tabbrowser-tab:hover {
+  color: var(--ff-midnight-color-base10) !important;
+}
+
+#TabsToolbar tab[selected] {
+  color: var(--ff-midnight-color-base0) !important;
+}
+
+/* Selected-tab line color */ 
+.tab-line[selected=true] {
+  background-color: var(--ff-midnight-color-accent) !important;
+}
+
+/* ---------------------------------------------------------------
+// Multi-account Container Extension - Tab-indicator options
+//
+// Styles: 
+// - Triangle (default)
+// - Dot
+// - Top line 
+// -------------------------------------------------------------*/
+
+.tab-background {
+  position: relative;
+}
+
+/* Triangle */
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-bottom-line {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0 !important;
+  border-style: solid;
+  border-width: 0 14px 14px 0;
+  border-color: transparent var(--identity-tab-color) transparent transparent;
+  background: none !important;
+}
+
+/* Dot */
+/*
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-bottom-line {
+  background: var(--identity-tab-color) !important;
+  height: 7px !important;
+  width: 7px;
+  position: absolute;
+  top: calc(50% - 3.5px);
+  right: 4px;
+  border-radius: 50%;
+}
+*/
+
+
+/* Top line, over the default line */
+/*
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-bottom-line {
+  background: linear-gradient(to right, transparent 0%, var(--identity-tab-color) 0%, var(--identity-tab-color) 100%, transparent 100%) !important;
+  height: 2px;
+  top: calc(-100% + 2px);
+  position: absolute;
+  left: 0;
+}
+*/
+
+
+/* ---------------------------------------------------------------
+// Urlbar and searchbar
+// -------------------------------------------------------------*/
+
+#urlbar,
+.searchbar-textbox {
+  border: 1px solid var(--ff-midnight-color-base) !important;
+  /* box-shadow: 0 1px 4px rgba(0,0,0,.05); */
+  box-shadow: none !important; 
+}
+
+#urlbar:hover,
+.searchbar-textbox:hover {
+  border-color: var(--ff-midnight-color-base) !important;
+  /* box-shadow: 0 1px 6px rgba(0,0,0,.1); */
+  box-shadow: none !important; 
+}
+
+#urlbar[focused="true"],
+.searchbar-textbox[focused="true"] {
+  border-color: var(--toolbar-field-focus-border-color) !important;
+  box-shadow: 0 0 0 1px var(--toolbar-field-focus-border-color) !important;
+}
+
+#urlbar:-moz-lwtheme[focused="true"] input::selection,
+#navigator-toolbox .searchbar-textbox:-moz-lwtheme[focused="true"] input::selection {
+  color: var(--ff-midnight-color-base0) !important;
+  background: var(--ff-midnight-color-base120) !important
+}
+
+/* ---------------------------------------------------------------
+// Toolbar
+// -------------------------------------------------------------*/
+
+toolbarbutton[disabled="true"],
+toolbarbutton[disabled="true"]:hover,
+toolbarbutton[disabled="true"]:hover:active,
+toolbarbutton[disabled="true"][open="true"] {
+  color: rgba(255,255,255,0.3) !important;
+}
+
+/* ---------------------------------------------------------------
+// Findbar
+// -------------------------------------------------------------*/
+
+.browserContainer > findbar {
+  border-top: 1px solid  var(--ff-midnight-color-base90) !important;
+}
+
+
+/* ---------------------------------------------------------------
+// Sidebar (history, bookmarks, synced tabs) ref:places.css
+// -------------------------------------------------------------*/
+
+#sidebar-box {
+  -moz-appearance: none !important;
+  background: var(--ff-midnight-color-base95) !important;
+}
+
+sidebarheader {
+  color: var(--ff-midnight-color-base10) !important;
+  background: var(--ff-midnight-color-base110) !important;
+}
+
+/* section of the panel with searchbox */
+#bookmarksPanel,
+#history-panel {
+  -moz-appearance: none !important;
+}
+
+#sidebar-search-container #search-box {
+	-moz-appearance:none !important; /* this also removes the magnifying glass icon */
+	background-color: var(--ff-midnight-color-base92) !important;
+ 	border: 1px solid var(--ff-midnight-color-base80) !important;
+ 	border-radius: 3px;
+ 	padding: 6px  6px 6px 22px !important;
+	color: var(--ff-midnight-color-base10) !important;
+	    
+  /* add the magnifying glass icon */
+  background-image: url("chrome://global/skin/icons/search-textbox.svg") !important;
+  background-repeat: no-repeat;
+  background-position: left 6px center;
+  -moz-context-properties: fill;
+  fill: var(--ff-midnight-color-base30) !important;
+}
+
+#sidebar-search-container #search-box[focused="true"] {
+ 	outline: 1px solid var(--ff-midnight-color-base80) !important;
+ 	-moz-outline-radius: 3px;
+}
+
+/* viewbutton next to searchfield */
+#viewButton {
+  color: var(--ff-midnight-color-base10) !important;
+}
+
+#viewButton > .button-box > .button-menu-dropmarker {
+  -moz-context-properties: fill; /* enables svg fill */
+  fill: var(--ff-midnight-color-base10) !important;
+}
+
+/* re-style from shared styles  */
+tree#historyTree:-moz-focusring,
+tree#bookmarks-view:-moz-focusring {
+  border: none !important;
+}  
+
+#historyTree treechildren::-moz-tree-row,
+#bookmarks-view treechildren::-moz-tree-row {
+  background-color: var(--ff-midnight-color-base95) !important; /*  -moz-field; */
+}
+
+/* Sidebar content */
+.sidebar-placesTree {
+  -moz-appearance: none !important;
+  background: var(--ff-midnight-color-base95) !important;
+  color: var(--ff-midnight-color-base10) !important;
+}
+
+/* Sidebar - list items */
+.sidebar-placesTreechildren::-moz-tree-row(selected) {
+  -moz-appearance: none !important; /* -moz-mac-source-list-selection; */ 
+  background: var(--ff-midnight-color-base120) !important;
+}
+.sidebar-placesTreechildren::-moz-tree-row(selected,focus) {
+  -moz-appearance: none !important;  /* -moz-mac-active-source-list-selection; */ 
+}
+
+.sidebar-placesTreechildren::-moz-tree-twisty(selected),
+.sidebar-placesTreechildren::-moz-tree-cell-text(selected) {
+  color: var(--ff-midnight-color-base10) !important;
+}
+
+@media (-moz-mac-yosemite-theme) {
+  .sidebar-placesTreechildren::-moz-tree-twisty(selected),
+  .sidebar-placesTreechildren::-moz-tree-cell-text(selected) {
+    color: var(--ff-midnight-color-accent) !important;
+  }
+
+  .sidebar-placesTreechildren::-moz-tree-twisty(selected, focus),
+  .sidebar-placesTreechildren::-moz-tree-cell-text(selected, focus) {
+    color: var(--ff-midnight-color-accent) !important;
+  }
+}
+
+/* Sidebar system icons color */
+.sidebar-placesTree treechildren::-moz-tree-image {
+  fill: var(--ff-midnight-color-base30) !important;
+  -moz-context-properties: fill; 
+}
+
+
+/* ---------------------------------------------------------------
+// Synced tabs - content container
+// -------------------------------------------------------------*/
+
+@-moz-document url("chrome://browser/content/syncedtabs/sidebar.xhtml") {
+  
+  body {
+    background-color: var(--ff-midnight-color-base95) !important;
+  }
+  
+  .content-container {
+    -moz-appearance: none !important;
+    background-color: var(--ff-midnight-color-base95) !important;
+  }
+  
+  .item {
+    color: var(--ff-midnight-color-base30) !important;
+  }
+  
+  .item.client[clientType] > .item-title-container > .item-icon-container {
+    fill: var(--ff-midnight-color-base30) !important;
+  }
+  
+  .item.selected > .item-title-container {
+    color: var(--ff-midnight-color-accent) !important;
+  }
+
+  .item.selected > .item-title-container {
+    -moz-appearance: none !important; /* -moz-mac-source-list-selection; */ 
+    background: var(--ff-midnight-color-base120) !important;
+  }
+  
+  .item.selected:focus > .item-title-container {
+    -moz-appearance: none !important;  /* -moz-mac-active-source-list-selection; */ 
+  }
+  
+  @media (-moz-mac-yosemite-theme) {
+    .item.selected > .item-title-container {
+      color: var(--ff-midnight-color-accent) !important;
+    }
+  
+    .item.selected:focus > .item-title-container {
+      color: var(--ff-midnight-color-accent) !important;
+    }
+  } 
+  
+  .deck .sync-state {
+    border-top: 1px solid var(--ff-midnight-color-base90) !important;
+  }
+  
+  .deck .button {
+    background-color: var(--ff-midnight-color-accent) !important;
+    color: var(--ff-midnight-color-base) !important;
+  }
+  
+  .deck .button:hover {
+    background-color: var(--ff-midnight-color-accent-dark) !important;
+  }
+  
+  .deck .button:hover:active {
+    background-color: var(--ff-midnight-color-accent-darker) !important;
+  }
+  
+  .deck .instructions {
+    color: var(--ff-midnight-color-base30) !important;
+  }
+  
+  .sync-state > p {
+    color: var(--ff-midnight-color-base30) !important;
+  }
+  
+  .item.empty .item-title-container {
+    color: var(--ff-midnight-color-base80) !important;
+  }
+  
+  .text-link {
+    color: var(--ff-midnight-color-accent) !important;
+  }
+
+  .search-box {
+    -moz-appearance: none !important; /* searchfield; */
+    padding: 6px 6px 6px 22px !important;
+    background-color: var(--ff-midnight-color-base90) !important;
+    color: var(--ff-midnight-color-base10) !important;
+    border: 1px solid var(--ff-midnight-color-base80) !important;
+    border-radius: 3px;
+    
+    /* add the magnifying glass icon */
+    background-image: url("chrome://global/skin/icons/search-textbox.svg") !important;
+    background-repeat: no-repeat;
+    background-position: left 6px center;
+    -moz-context-properties: fill;
+    fill: var(--ff-midnight-color-base30) !important;
+  }
+  
+  .search-box[focused="true"] {
+   	outline: 1px solid var(--ff-midnight-color-base80) !important;
+   	-moz-outline-radius: 3px;   
+  }
+  
+}
+
+/* ---------------------------------------------------------------
+// Common Dialog
+// -------------------------------------------------------------*/
+
+@-moz-document url("chrome://global/content/commonDialog.xul") {
+  #commonDialog {
+    -moz-appearance: none !important;
+    background: var(--ff-midnight-color-base) !important;
+    color: var(--ff-midnight-color-base30) !important;
+  }
+}
+
+/* ---------------------------------------------------------------
+// Toggle button in dialog
+// -------------------------------------------------------------*/
+
+#appMenu-tp-toggle[enabled="true"] {
+  background-color: var(--ff-midnight-color-accent) !important;
+  border: 1px solid var(--ff-midnight-color-accent) !important;
+}
+
+#appMenu-tp-toggle[enabled="true"]:hover, 
+#appMenu-tp-toggle[enabled="true"]:-moz-focusring {
+  background-color: var(--ff-midnight-color-accent) !important;
+}
+
+
+/* ---------------------------------------------------------------
+// Customization page
+// -------------------------------------------------------------*/
+
+.customizationmode-button {
+  border: 1px solid var(--ff-midnight-color-base70) !important;
+  background-color: var(--ff-midnight-color-base95) !important;
+}
+
+.customizationmode-checkbox:not(:-moz-lwtheme), 
+.customizationmode-button {
+  color: var(--ff-midnight-color-base10) !important;
+}
+
+.customizationmode-button > .box-inherit > .button-menu-dropmarker {
+  -moz-context-properties: fill;
+  fill: var(--ff-midnight-color-base10) !important;
+}
+
+#customization-done-button:-moz-any(:active, :hover):not([disabled]) {
+  background-color: var(--ff-midnight-color-accent) !important;
+}
+
+#customization-done-button {
+  color: var(--ff-midnight-color-base) !important;
+  border-color: var(--ff-midnight-color-accent) !important;
+  background-color: var(--ff-midnight-color-accent) !important;
+}
+
+/* ---------------------------------------------------------------
+// Statuspanel
+//
+// panel shown at bottom of viewport when hovering over links (default: off)
+// -------------------------------------------------------------*/
+
+/*
+#statuspanel #statuspanel-label,
+statuspanel .statuspanel-label {
+  background-color: var(--ff-midnight-color-base110) !important;
+  color: var(--ff-midnight-color-base10) !important;
+  border: none !important;
+}
+*/
+
+
+/* ---------------------------------------------------------------
+// Miscellaneous
+// -------------------------------------------------------------*/
+
+/* Prevent white bg color flash when opening new tabs */
+/* buggy, may not always work! */
+#browser vbox#appcontent tabbrowser,
+#content,
+#tabbrowser-tabpanels,
+browser[type=content-primary],
+browser[type=content] > html:not(#ublock0-epicker) {
+  background: var(--ff-midnight-color-base) !important;
+}

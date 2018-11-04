@@ -1,0 +1,29 @@
+/* ###############################################################
+|
+|  ** COSMOS ** (Dark Blue)
+|
+| - Color-base is the main theme color and has a color palette from light (0) to dark (120)
+| - Color-accent is for links, highlights, etc.
+|
+| ############################################################# */
+
+:root {
+  --ff-midnight-color-base0:         #E6EFF8;
+  --ff-midnight-color-base5:         #D7E6F6;        
+  --ff-midnight-color-base10:        #CAD9E8;
+  --ff-midnight-color-base30:        #889BBD;
+  --ff-midnight-color-base50:        #57688A;
+  --ff-midnight-color-base70:        #495B7B;
+  --ff-midnight-color-base80:        #42516D;
+  --ff-midnight-color-base90:        #394661;
+  --ff-midnight-color-base92:        #303E5A;
+  --ff-midnight-color-base95:        #27344E;
+  --ff-midnight-color-base:          #212D45; /* main theme color */
+  --ff-midnight-color-base110:       #1C2639;
+  --ff-midnight-color-base120:       #141B29;
+  
+  --ff-midnight-color-accent-light:  #90E8F2;
+  --ff-midnight-color-accent:        #65C9D5; 
+  --ff-midnight-color-accent-dark:   #2AABBA;
+  --ff-midnight-color-accent-darker: #228B97;
+}

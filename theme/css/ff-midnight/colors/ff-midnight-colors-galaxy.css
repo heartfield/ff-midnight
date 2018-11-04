@@ -1,0 +1,29 @@
+/* ###############################################################
+|
+|  ** GALAXY ** (Dark Grey-blue)
+|
+| - Color-base is the main theme color and has a color palette from light (0) to dark (120)
+| - Color-accent is for links, highlights, etc.
+|
+| ############################################################# */
+
+:root {
+  --ff-midnight-color-base0:         #EAEDF1;
+  --ff-midnight-color-base5:         #DEE4EA;        
+  --ff-midnight-color-base10:        #D0D6DC;
+  --ff-midnight-color-base30:        #929AA7;
+  --ff-midnight-color-base50:        #5F6674;
+  --ff-midnight-color-base70:        #525966;
+  --ff-midnight-color-base80:        #494F5A;
+  --ff-midnight-color-base90:        #3F454F;
+  --ff-midnight-color-base92:        #373C48;
+  --ff-midnight-color-base95:        #2D323D;
+  --ff-midnight-color-base:          #272C35; /* main theme color */
+  --ff-midnight-color-base110:       #21252C;
+  --ff-midnight-color-base120:       #181A20;
+
+  --ff-midnight-color-accent-light:  #B7D1FF;
+  --ff-midnight-color-accent:        #88B0F8; 
+  --ff-midnight-color-accent-dark:   #588BE8;
+  --ff-midnight-color-accent-darker: #4871BD;
+}

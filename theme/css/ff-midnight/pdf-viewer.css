@@ -1,0 +1,25 @@
+/* ---------------------------------------------------------------
+// PDF Viewer
+// another regexp(".*\\.(p|P)(d|D)(f|F).*")
+// -------------------------------------------------------------*/
+
+@-moz-document regexp(".*\\.pdf((\\?|#).*)?") {
+
+  body {
+    background-color: var(--ff-midnight-color-base) !important;
+    background-image: none !important; /* url(images/texture.png); */
+  }
+
+  #toolbarContainer, 
+  .findbar, 
+  .secondaryToolbar {
+    background-color: var(--ff-midnight-color-base110) !important;
+    background-image: none !important; /* url(images/texture.png), linear-gradient(#525252, #454545); */
+  }
+  
+  #toolbarSidebar {
+    background-color: var(--ff-midnight-color-base95) !important;
+    background-image: none !important; /* url(images/texture.png), linear-gradient(#4d4d4d, #404040); */
+  
+  }
+}

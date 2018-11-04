@@ -1,0 +1,391 @@
+/* ###############################################################
+//
+// Ublock Origin Popup Panel and Dashboard pages
+//
+// ###############################################################
+//
+// Required configuration: 
+// 1. Find and Copy the UUID of your uBlock Origin on the URL about:debugging#addons
+// 2. Replace the UUID code below in "moz-extension://UUID/" with your UUID:
+// 
+// #############################################################*/
+
+
+@-moz-document url-prefix("moz-extension://9a8c0684-523f-8845-86ac-2408a8a94e47/") {
+
+body {
+  background-color: var(--ff-midnight-color-base) !important;
+  color: var(--ff-midnight-color-base30) !important;
+}
+
+a {
+  color:  var(--ff-midnight-color-accent-dark) !important;
+}
+
+h2 {
+  background-color: var(--ff-midnight-color-base95) !important;
+  color: var(--ff-midnight-color-base30) !important;
+}
+
+#appinfo {
+  background-color: var(--ff-midnight-color-base110) !important;
+  color: var(--ff-midnight-color-base30) !important;
+}
+
+#switch .fa {
+  color: var(--ff-midnight-color-accent-dark) !important;
+}
+
+body.off #switch .fa {
+  color: var(--ff-midnight-color-base80) !important;
+}
+
+.tool {
+  color: var(--ff-midnight-color-base50) !important;
+}
+
+.tool.enabled:hover {
+  color: var(--ff-midnight-color-base10) !important;
+}
+
+.statName {
+  color: var(--ff-midnight-color-base50) !important;
+}
+
+#extraTools {
+  background-color: var(--ff-midnight-color-base92) !important;
+  color: var(--ff-midnight-color-base30) !important;
+}
+
+#extraTools>span>span.badge {
+  color: var(--ff-midnight-color-base10) !important;
+}
+
+#extraTools > span > span:last-of-type {
+  color: var(--ff-midnight-color-alert) !important;
+}
+
+#extraTools > span > span:last-of-type > svg {
+  stroke: var(--ff-midnight-color-alert) !important;
+}
+
+#extraTools > span:hover {
+  color: var(--ff-midnight-color-base30) !important;
+}
+
+#refresh {
+  background-color: var(--ff-midnight-color-base92) !important;
+  border: 1px solid var(--ff-midnight-color-base80) !important;
+  color: var(--ff-midnight-color-base50) !important;
+}
+
+body.dirty #refresh:hover {
+  color: var(--ff-midnight-color-base10) !important;
+}
+
+#tooltip {
+  background-color: var(--ff-midnight-color-base95) !important;
+  border: 1px solid var(--ff-midnight-color-base50) !important;
+  box-shadow: 1px 1px 3px var(--ff-midnight-color-base110) !important;
+  color: var(--ff-midnight-color-base10) !important;
+}
+
+#firewallContainer > div {
+  background-color: var(--ff-midnight-color-base95) !important;
+}
+
+#firewallContainer > div:hover {
+  background-color: var(--ff-midnight-color-base92) !important;
+}
+
+#firewallContainer > div > span {
+  border-bottom: 1px solid var(--ff-midnight-color-base110) !important;
+  color: var(--ff-midnight-color-base10) !important;
+}
+
+#firewallContainer > div.isDomain > span.isIDN:first-of-type > sup:before {
+  color: var(--ff-midnight-color-base70) !important;
+}
+
+#firewallContainer > div > span:first-of-type~span {
+  border-left: 1px solid var(--ff-midnight-color-base110) !important;
+}
+
+#firewallContainer > div > span:nth-of-type(3),
+#firewallContainer > div > span:nth-of-type(4) {
+  color: var(--ff-midnight-color-base30) !important;
+}
+
+#firewallContainer > div:first-of-type > span:first-of-type:before {
+  color: var(--ff-midnight-color-base80) !important;
+}
+
+#firewallContainer>div.allowed>span:first-of-type:before,
+#firewallContainer.minimized>div.isDomain.totalAllowed>span:first-of-type:before {
+  background-color: rgb(0, 160, 0);
+}
+
+#firewallContainer.colorBlind>div.allowed>span:first-of-type:before,
+#firewallContainer.colorBlind.minimized>div.isDomain.totalAllowed>span:first-of-type:before {
+  background-color: rgb(255, 194, 57);
+}
+
+#firewallContainer>div.blocked>span:first-of-type:before,
+#firewallContainer.minimized>div.isDomain.totalBlocked>span:first-of-type:before {
+  background-color: rgb(192, 0, 0);
+}
+
+#firewallContainer.colorBlind>div.blocked>span:first-of-type:before,
+#firewallContainer.colorBlind.minimized>div.isDomain.totalBlocked>span:first-of-type:before {
+  background-color: rgb(0, 19, 110);
+}
+
+#firewallContainer>div.allowed.blocked>span:first-of-type:before,
+#firewallContainer.minimized>div.isDomain.totalAllowed.totalBlocked>span:first-of-type:before {
+  background-color: rgb(192, 160, 0);
+}
+
+
+/* Rule cells */
+
+body.advancedUser #firewallContainer>div>span.allowRule {
+  background-color: rgba(0, 160, 0, 0.3);
+}
+
+body.advancedUser #firewallContainer.colorBlind>div>span.allowRule {
+  background-color: rgba(255, 194, 57, 0.4);
+}
+
+body.advancedUser #firewallContainer>div>span.blockRule {
+  background-color: rgba(192, 0, 0, 0.3);
+}
+
+body.advancedUser #firewallContainer.colorBlind>div>span.blockRule {
+  background-color: rgba(0, 19, 110, 0.4);
+}
+
+body.advancedUser #firewallContainer>div>span.noopRule {
+  background-color: rgba(108, 108, 108, 0.3);
+}
+
+body.advancedUser #firewallContainer.colorBlind>div>span.noopRule {
+  background-color: rgba(96, 96, 96, 0.4);
+}
+
+body.advancedUser #firewallContainer>div>span.ownRule {
+  color: white;
+}
+
+body.advancedUser #firewallContainer>div>span.allowRule.ownRule {
+  background-color: rgba(0, 160, 0, 1);
+}
+
+body.advancedUser #firewallContainer.colorBlind>div>span.allowRule.ownRule {
+  background-color: rgba(255, 194, 57, 1);
+}
+
+body.advancedUser #firewallContainer>div>span.blockRule.ownRule {
+  background-color: rgba(192, 0, 0, 1);
+}
+
+body.advancedUser #firewallContainer.colorBlind>div>span.blockRule.ownRule {
+  background-color: rgba(0, 19, 110, 1);
+}
+
+body.advancedUser #firewallContainer>div>span.noopRule.ownRule {
+  background-color: var(--ff-midnight-color-base50) !important; /* rgba(108, 108, 108, 1); */
+}
+
+#actionSelector>span:first-of-type {
+  background-color: rgb(0, 160, 0);
+}
+
+#actionSelector.colorBlind>span:first-of-type {
+  background-color: rgb(255, 194, 57);
+}
+
+#actionSelector>span:nth-of-type(2) {
+  background-color: var(--ff-midnight-color-base50) !important; /* rgb(108, 108, 108); */
+}
+
+#actionSelector>span:nth-of-type(3) {
+  background-color: rgb(192, 0, 0);
+}
+
+#actionSelector.colorBlind>span:nth-of-type(3) {
+  background-color: rgb(0, 19, 110);
+}
+
+#rulesetTools {
+  color: var(--ff-midnight-color-base50) !important;
+}
+
+#rulesetTools > span {
+  background-color: var(--ff-midnight-color-base95) !important;
+  border: 1px solid var(--ff-midnight-color-base90) !important;
+}
+
+#firewallContainer.dirty~#rulesetTools > span:hover {
+  color: var(--ff-midnight-color-base10) !important;
+}
+
+
+/* ---------------------------------------------------------------
+// Dashboard
+// -------------------------------------------------------------*/
+  
+#dashboard-nav-widgets {
+  background-color: var(--ff-midnight-color-base) !important;
+  border-bottom: 1px solid var(--ff-midnight-color-base90) !important;
+}
+
+.tabButton {
+  background-color: var(--ff-midnight-color-base90) !important;
+  border: 1px solid var(--ff-midnight-color-base90) !important;
+  border-bottom: 1px solid var(--ff-midnight-color-base90) !important;
+  color: var(--ff-midnight-color-base10) !important;
+}
+
+.tabButton.selected {
+  background-color: var(--ff-midnight-color-base) !important;
+  border-bottom: 1px solid var(--ff-midnight-color-base) !important;
+}
+
+a.fa.info {
+  color: var(--ff-midnight-color-accent) !important;
+  opacity: 0.6 !important;
+}
+
+a.fa.info.important {
+  color: var(--ff-midnight-color-alert) !important;
+}
+
+a.fa.info:hover {
+  opacity: 1 !important;
+}
+
+#localData div {
+  border-top: 1px solid var(--ff-midnight-color-base90) !important;
+}
+
+/* ---------------------------------------------------------------
+// Logger page
+// -------------------------------------------------------------*/
+
+.permatoolbar {
+  background-color: var(--ff-midnight-color-base) !important; 
+}
+
+.permatoolbar .button {
+  background-color: var(--ff-midnight-color-base) !important;
+}
+
+.permatoolbar .button:hover {
+  background-color: var(--ff-midnight-color-base90) !important;
+}
+
+.inspector {
+  border-top: 1px solid var(--ff-midnight-color-base90) !important;
+}
+
+#netInspector tr td {
+    border-top: 1px solid var(--ff-midnight-color-base90) !important;
+}
+
+body #netInspector td {
+  border: 1px solid var(--ff-midnight-color-base90) !important;
+}
+
+#netInspector tr.maindoc {
+  background-color: var(--ff-midnight-color-base110) !important;
+  color: var(--ff-midnight-color-base30) !important;
+}
+
+
+/* ---------------------------------------------------------------
+// Codemirror
+// -------------------------------------------------------------*/
+
+#diff {
+  border-color: var(--ff-midnight-color-base90) !important;
+}
+
+#ruleFilter input,
+.cm-search-widget input,
+.commandEntries input {
+  -moz-appearance: none !important;
+  background: var(--ff-midnight-color-base95) !important;
+  border: 1px solid var(--ff-midnight-color-base90) !important;
+  padding: 4px;
+  border-radius: 3px;
+  color: var(--ff-midnight-color-base10) !important;
+}
+
+#ruleFilter input::placeholder,
+.cm-search-widget input::placeholder,
+.commandEntries input::placeholder {
+  color: var(--ff-midnight-color-base30) !important;
+}
+
+.CodeMirror {
+  background: none !important;
+  color: var(--ff-midnight-color-base30) !important;
+}
+
+.CodeMirror-merge {
+  border: 1px solid var(--ff-midnight-color-base90) !important;
+}
+
+.CodeMirror-gutters {
+  border-right: 1px solid var(--ff-midnight-color-base92) !important;
+  background-color: var(--ff-midnight-color-base95) !important;
+}
+
+.CodeMirror-merge-gap {
+  border-left: 1px solid var(--ff-midnight-color-base92) !important;
+  border-right: 1px solid var(--ff-midnight-color-base92) !important;
+  background: var(--ff-midnight-color-base95) !important;
+}
+
+.CodeMirror-activeline-background {
+  background: var(--ff-midnight-color-base120) !important;
+  color: var(--ff-midnight-color-base0) !important;
+}
+
+.CodeMirror-activeline {
+  color: var(--ff-midnight-color-base10) !important;
+}
+
+.CodeMirror-linenumber {
+  color: var(--ff-midnight-color-base10) !important;
+}
+
+.cm-search-widget {
+  background-color: var(--ff-midnight-color-base92) !important;
+}
+
+.cm-search-widget .fa {
+  color: var(--ff-midnight-color-base30) !important;
+}
+
+.cm-s-default .cm-comment { 
+  color: var(--ff-midnight-color-base50) !important; 
+}
+
+.cm-staticext { 
+  color: var(--ff-midnight-color-accent) !important; 
+}
+
+.cm-staticnetBlock { 
+  color: var(--ff-midnight-color-alert) !important;
+}
+
+.cm-staticnetAllow { 
+  color: #004f00; /* default darkgreen */
+}
+
+.cm-staticOpt { 
+  background-color: var(--ff-midnight-color-base70) !important; 
+}
+
+} /* end moz-document wrapper */

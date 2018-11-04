@@ -1,0 +1,893 @@
+/* ###############################################################
+//
+//  Firefox About pages - combined styles (reference about:about)
+//
+// ###############################################################
+// 
+// - url-prefix("about:") -> matches all Firefox About pages
+// - url-prefix("chrome://") -> matches content loaded in dialogs (Using a general prefix might cause some issues with other extensions. Further testing needed)
+//
+// - Regular expression in @-moz-document is allowed as: regexp("")
+// - Wildcard in @moz-document is not allowed
+//
+// #############################################################*/
+
+@-moz-document 
+  url-prefix("about:"),
+  url-prefix("chrome://") {
+  
+  :root {
+      
+    /* ---------------------------------------------------------------
+    // Customized Custom Properties
+    // -------------------------------------------------------------*/
+        
+    --in-content-page-color: var(--ff-midnight-color-base30) !important;
+    --in-content-page-background: var(--ff-midnight-color-base) !important;
+    --in-content-text-color: var(--ff-midnight-color-base30) !important;
+    --in-content-selected-text: var(--ff-midnight-color-base95) !important;
+    --in-content-box-background: var(--ff-midnight-color-base95) !important;
+    --in-content-box-background-odd: var(--ff-midnight-color-base95) !important;
+    --in-content-box-background-hover: var(--ff-midnight-color-base92) !important;
+    --in-content-box-background-active: var(--ff-midnight-color-base90) !important;
+    --in-content-box-border-color: var(--ff-midnight-color-base70) !important;
+    --in-content-item-hover: var(--ff-midnight-color-base120) !important;
+    --in-content-item-selected: var(--ff-midnight-color-accent) !important;
+    --in-content-border-highlight: var(--ff-midnight-color-accent) !important;
+    --in-content-border-focus: var(--ff-midnight-color-accent) !important;
+    --in-content-border-color: var(--ff-midnight-color-base70) !important;
+    --in-content-category-outline-focus: 1px dotted var(--ff-midnight-color-accent) !important;
+    --in-content-category-text: var(--ff-midnight-color-base5) !important;
+    --in-content-category-text-active: var(--ff-midnight-color-base5) !important;
+    --in-content-category-text-selected: var(--ff-midnight-color-accent) !important;
+    --in-content-category-text-selected-active: var(--ff-midnight-color-accent) !important;
+    --in-content-category-background-hover: var(--ff-midnight-color-base90) !important;
+    --in-content-category-background-active: var(--ff-midnight-color-base92) !important;
+    --in-content-category-background-selected-hover: var(--ff-midnight-color-base92) !important;
+    --in-content-category-background-selected-active: var(--ff-midnight-color-base95) !important;
+    --in-content-tab-color: var(--ff-midnight-color-base80) !important;
+    --in-content-link-color: var(--ff-midnight-color-accent-dark) !important;
+    --in-content-link-color-hover: var(--ff-midnight-color-accent) !important;
+    --in-content-link-color-active: var(--ff-midnight-color-accent-light) !important;
+    --in-content-link-color-visited: var(--ff-midnight-color-accent-dark) !important;
+    --in-content-primary-button-background: var(--ff-midnight-color-accent) !important;
+    --in-content-primary-button-background-hover: var(--ff-midnight-color-accent) !important;
+    --in-content-primary-button-background-active: var(--ff-midnight-color-accent-light) !important;
+    --in-content-table-background: var(--ff-midnight-color-base) !important;
+    --in-content-table-border-dark-color: var(--ff-midnight-color-base92) !important;
+    --in-content-table-header-background: var(--ff-midnight-color-base110) !important;
+    
+  }
+  
+  /* general text selection */
+  ::selection {
+    color: var(--ff-midnight-color-base10) !important;
+    background: var(--ff-midnight-color-base120) !important;
+    text-shadow: none !important;
+  }
+  
+  /* Checkboxes and radio styling */
+  .checkbox-check {
+    background-color: var(--ff-midnight-color-base95) !important;
+    background-image: none !important;
+    box-shadow: 0 1px 1px 0 var(--ff-midnight-color-base95), inset 0 2px 0 0 #0000 !important;
+  }
+  
+  .radio-check {
+    background-color: var(--ff-midnight-color-base95) !important;
+    background-image: none !important;
+    box-shadow: 0 1px 1px 0 var(--ff-midnight-color-base95), inset 0 2px 0 0 #0000 !important;
+  }
+  
+  .checkbox-check[checked],
+  .radio-check[selected] {
+    fill: var(--ff-midnight-color-accent) !important;
+  }
+  
+  label[disabled="true"] {
+    color: var(--ff-midnight-color-base50) !important;
+  }
+  
+  /* Focus outline styles */
+  button:-moz-focusring,
+  menulist:-moz-focusring,
+  checkbox:-moz-focusring > .checkbox-check,
+  input[type="checkbox"]:-moz-focusring + label:before,
+  radio[focused="true"] > .radio-check {
+    outline: 2px solid var(--ff-midnight-color-accent) !important;
+    outline-offset: 0 !important;
+    -moz-outline-radius: 3px !important;
+  }
+  
+  radio[focused="true"] > .radio-check {
+    -moz-outline-radius: 100% !important;
+  }
+  
+  /* tables */
+  table {
+    border-collapse: collapse;
+  }
+  
+  th {
+    color: var(--ff-midnight-color-base10) !important;
+  }
+  
+  /* Menulist disabled items */
+  menulist > menupopup > menu[disabled="true"],
+  menulist > menupopup > menuitem[disabled="true"],
+  button[type="menu"] > menupopup > menu[disabled="true"],
+  button[type="menu"] > menupopup > menuitem[disabled="true"] {
+    color: var(--ff-midnight-color-base30) !important;
+  }
+  
+  /* Menulist icon color */
+  menulist:not([editable="true"]) > .menulist-dropmarker {
+    fill: var(--ff-midnight-color-accent) !important;
+  }
+  
+  /* Checkbox and Radio button label disabled color */
+  [disabled="true"] .checkbox-label,
+  [disabled="true"] .radio-label {
+    color: var(--ff-midnight-color-base50) !important;
+  }
+  
+  /* Checkbox and Radio button disabled description text color */
+  description.indent, .indent > description {
+    color: var(--ff-midnight-color-base50) !important;
+  }
+  
+  /* Searchbox icon color */
+  textbox[type="search"]:not([searchbutton]) > .textbox-input-box > .textbox-search-sign {
+    -moz-context-properties: fill;
+    fill: var(--ff-midnight-color-accent) !important;
+  }
+  
+  
+  /* ---------------------------------------------------------------
+  // Richlistbox
+  // -------------------------------------------------------------*/
+  
+/*
+  richlistbox {
+    background-color: -moz-Field;
+    color: -moz-FieldText;
+  }
+*/
+  
+  richlistbox:not(#categories):not(.list):-moz-focusring {
+    border: 1px solid var(--ff-midnight-color-base70) !important;
+  }
+
+  richlistbox[disabled="true"] {
+    color: var(--ff-midnight-color-base50) !important;
+  }
+  
+  richlistitem[selected="true"] {
+    background-color: var(--ff-midnight-color-base120) !important;
+    color: var(--ff-midnight-color-base10) !important;
+  }
+  
+  richlistbox:focus > richlistitem[selected="true"] {
+    background-color: var(--ff-midnight-color-base120) !important;
+    color: var(--ff-midnight-color-base0) !important;
+  }
+  
+  
+  /* ---------------------------------------------------------------
+  // Dialogs 
+  // -------------------------------------------------------------*/
+  
+  dialog, 
+  window, 
+  .prefpane, 
+  .windowDialog {
+    background-color: var(--ff-midnight-color-base) !important;
+    color: var(--ff-midnight-color-base30) !important;
+  }
+  
+  .dialogBox {
+    background-color: var(--ff-midnight-color-base) !important;
+    color: var(--ff-midnight-color-base30) !important;
+  }
+  
+  .dialogBox > .groupbox-title {
+    background-color: var(--ff-midnight-color-base110) !important;
+    border-bottom: 1px solid var(--ff-midnight-color-base92) !important;
+  }
+  
+  #permissionsDisableDescription {
+    color: var(--ff-midnight-color-base50) !important;  
+  }
+  
+  /* update history dialog */
+  #historyItems { 
+    -moz-appearance: none !important;
+  }
+  
+  /* clear all history warning box */
+  #sanitizeEverythingWarningBox {
+    background-color: var(--ff-midnight-color-base90) !important;
+    border: 1px solid var(--ff-midnight-color-base70) !important;
+  }
+  
+} /* End main about: pages moz-document wrapper */
+
+
+
+/* ###############################################################
+//
+//  Firefox About pages - individual styles
+//
+// #############################################################*/
+
+
+/* ---------------------------------------------------------------
+// About:Home
+// About:Newtab
+//
+// These custom properties don't work when placed inside @-moz-document wrapper (!?)
+// -------------------------------------------------------------*/
+
+/* ---------------------------------------------------------------
+// New Tab Custom Properties - ref. activity-stream.css
+// -------------------------------------------------------------*/
+
+body.activity-stream {
+      
+  --newtab-background-color: var(--ff-midnight-color-base) !important;
+  --newtab-border-primary-color: rgba(249, 249, 250, 0.8);
+  --newtab-border-secondary-color: rgba(249, 249, 250, 0.1);
+  --newtab-button-primary-color: var(--ff-midnight-color-accent) !important;
+  --newtab-button-secondary-color: var(--ff-midnight-color-base90) !important;
+  --newtab-element-active-color: rgba(249, 249, 250, 0.2);
+  --newtab-element-hover-color: rgba(249, 249, 250, 0.1);
+  --newtab-icon-primary-color: rgba(249, 249, 250, 0.8);
+  --newtab-icon-secondary-color: rgba(249, 249, 250, 0.4);
+  --newtab-icon-tertiary-color: rgba(249, 249, 250, 0.4);
+  --newtab-inner-box-shadow-color: rgba(249, 249, 250, 0.2);
+  --newtab-link-primary-color: var(--ff-midnight-color-accent) !important;
+  --newtab-link-secondary-color: var(--ff-midnight-color-accent-dark) !important;
+  --newtab-text-conditional-color: var(--ff-midnight-color-base10) !important;
+  --newtab-text-primary-color: var(--ff-midnight-color-base30) !important;
+  --newtab-text-secondary-color: rgba(249, 249, 250, 0.8);
+  --newtab-textbox-background-color: var(--ff-midnight-color-base92) !important;
+  --newtab-textbox-border: rgba(249, 249, 250, 0.1) !important;
+  --newtab-textbox-focus-color: var(--ff-midnight-color-base70) !important;
+  --newtab-textbox-focus-boxshadow: 0 0 0 1px var(--ff-midnight-color-base70), 0 0 0 3px var(--ff-midnight-color-base70) !important; /* rgba(69, 161, 255, 0.3); */
+  --newtab-contextmenu-background-color: var(--ff-midnight-color-base95) !important;
+  --newtab-contextmenu-button-color: var(--ff-midnight-color-base) !important;
+  --newtab-modal-color: var(--ff-midnight-color-base) !important;
+  --newtab-overlay-color: rgba(12, 12, 13, 0.8);
+  --newtab-section-header-text-color: rgba(249, 249, 250, 0.8);
+  --newtab-section-navigation-text-color: rgba(249, 249, 250, 0.8);
+  --newtab-section-active-contextmenu-color: var(--ff-midnight-color-base0) !important;
+  --newtab-search-border-color: rgba(249, 249, 250, 0.2);
+  --newtab-search-dropdown-color: var(--ff-midnight-color-base90) !important;
+  --newtab-search-dropdown-header-color: var(--ff-midnight-color-base90) !important;
+  --newtab-search-header-background-color: var(--ff-midnight-color-base80) !important;
+  --newtab-search-icon-color: rgba(249, 249, 250, 0.6);
+  --newtab-topsites-background-color: var(--ff-midnight-color-base90) !important;
+  --newtab-topsites-icon-shadow: none;
+  --newtab-topsites-label-color: rgba(249, 249, 250, 0.8);
+  --newtab-card-active-outline-color: var(--ff-midnight-color-base80) !important;
+  --newtab-card-background-color: var(--ff-midnight-color-base90) !important;
+  --newtab-card-hairline-color: rgba(249, 249, 250, 0.1);
+  --newtab-card-shadow: 0 1px 8px 0 rgba(12, 12, 13, 0.2);
+  --newtab-snippets-background-color: var(--ff-midnight-color-base110) !important;
+  --newtab-snippets-hairline-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Tweak the context menu dropdown hovers */
+body.activity-stream.dark-theme .context-menu > ul > li > a:-moz-any(:focus, :hover) {
+  background: var(--ff-midnight-color-base120) !important;
+  color: var(--ff-midnight-color-base10) !important;
+}
+
+
+/* Hide the Firefox icon for the Guide Tour - Default: not hidden */
+/*
+#onboarding-overlay-button {
+  display: none !important;
+}
+*/
+
+#onboarding-overlay {
+  color: var(--ff-midnight-color-base30) !important;
+}
+
+#onboarding-overlay-button::after {
+  border: 2px solid var(--ff-midnight-color-base95) !important;
+  background: var(--ff-midnight-color-accent) !important;
+}
+
+#onboarding-overlay-button:hover::after,
+#onboarding-overlay-button.onboarding-speech-bubble::after {
+  background: var(--ff-midnight-color-accent-dark) !important;
+  color: var(--ff-midnight-color-base) !important;
+}
+
+#onboarding-overlay-button-watermark-icon {
+  fill: var(--ff-midnight-color-base50) !important;
+}
+
+#onboarding-overlay.onboarding-opened > #onboarding-overlay-dialog {
+  background: var(--ff-midnight-color-base) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#onboarding-tour-list .onboarding-tour-item {
+  --onboarding-tour-item-active-color: var(--ff-midnight-color-accent) !important;
+}
+
+#onboarding-tour-list .onboarding-tour-item::after {
+  background-color: var(--ff-midnight-color-base10) !important;
+}
+
+.onboarding-tour-action-button {
+  background: var(--ff-midnight-color-accent) !important;
+  color: var(--ff-midnight-color-base) !important;
+}
+
+.onboarding-tour-action-button:hover:not([disabled])  {
+  background: var(--ff-midnight-color-accent-dark) !important;
+}
+
+.onboarding-tour-action-button:active:not([disabled]) {
+  background: var(--ff-midnight-color-accent-dark) !important;
+}
+
+.onboarding-action-button {
+  background: var(--ff-midnight-color-base95) !important;
+  border: 1px solid var(--ff-midnight-color-base70) !important;
+  color: var(--ff-midnight-color-base30) !important;
+}
+
+.onboarding-action-button:hover {
+  background-color: var(--ff-midnight-color-base92) !important;
+}
+
+.onboarding-action-button:active {
+  background-color: var(--ff-midnight-color-base90) !important;
+}
+
+.onboarding-tour-content > img {
+  filter: invert(1) brightness(200%);
+}
+
+/* ---------------------------------------------------------------
+// About:Home, Newtab, Blank
+//
+// Prevent white flash when opening new tabs
+// ** buggy, may not always work! **
+// -------------------------------------------------------------*/
+
+@-moz-document url-prefix("about:newtab"),
+@-moz-document url-prefix("about:home"),
+@-moz-document url-prefix("about:blank") {
+	html:not(#ublock0-epicker),
+	html:not(#ublock0-epicker) body, 
+	html:not(#ublock0-epicker) #newtab-customize-overlay {
+	  background-color: var(--ff-midnight-color-base) !important;
+    color: var(--ff-midnight-color-base10) !important;
+  }
+}
+
+
+/* ---------------------------------------------------------------
+// About:Addons
+// -------------------------------------------------------------*/
+
+@-moz-document url-prefix("about:addons") {
+  
+  /* make scrollbox border invisible when focused */
+  .list:-moz-focusring > scrollbox > .scrollbox-innerbox {
+    border-color: transparent !important;
+  }
+  
+  /* Needed to override normal button style from inContent.css */
+  button.button-link:not([disabled="true"]):active:hover {
+    color: var(--ff-midnight-color-accent) !important;
+  }
+  
+  /* Text color for disabled extensions */
+  #addon-list .addon[active="false"] > .content-container > .content-inner-container {
+    color: var(--ff-midnight-color-base50) !important;
+  }
+  
+  /* Set text color for all content */
+  .detail-view-container {
+    color: inherit !important;
+  }
+  
+  /* Remove the text shadows in details rows */
+  .detail-row, 
+  .detail-row-complex {
+    text-shadow: none !important;
+  }
+  
+  /* Addon options content is loaded in a frame and is not stylable so we can only set a background for this section */
+  #addon-options-prompts-stack {
+    background: var(--ff-midnight-color-base10) !important;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 3px;
+  }
+  
+  /* Header options button */
+  .header-button:not([disabled="true"]):hover, 
+  #header-utils-btn:not([disabled="true"]):hover {
+    background-color: var(--ff-midnight-color-base90) !important;  
+  }
+  
+  #header-utils-btn {
+    fill: var(--ff-midnight-color-base30) !important;
+  }
+  
+  /* disable gradient from deleted addon message header */
+  .addon-view[notification],
+  .addon-view[pending] {
+    background-image:none !important;
+  }
+  
+  .addon-view[pending="disable"] .pending, 
+  .addon-view[pending="uninstall"] .pending {
+    color: var(--ff-midnight-color-base10) !important;
+  }
+}
+
+/* Get Addons page */
+@-moz-document url-prefix("https://discovery.addons.mozilla.org/en-US/firefox/discovery/pane/") {
+  html, body {
+    background: var(--ff-midnight-color-base) !important;
+  }
+  
+  header h1 {
+    color: var(--ff-midnight-color-base30) !important;
+  }
+  
+  .disco-content {
+    color: var(--ff-midnight-color-base30) !important;
+  }
+  
+  .Button--action {
+    background: var(--ff-midnight-color-accent-dark) !important;
+  }
+}
+
+
+/* ---------------------------------------------------------------
+// About:Preferences
+// -------------------------------------------------------------*/
+
+@-moz-document url-prefix("about:preferences") {
+  
+  /* Preferences Category section border */
+  .subcategory:not([hidden]) ~ .subcategory {
+    border-top: 1px solid var(--ff-midnight-color-base92) !important;
+  } 
+  
+  /* Preferences > Home - icons */
+  #homeContentsGroup checkbox[src] .checkbox-icon {
+    fill: var(--ff-midnight-color-accent) !important;
+    -moz-context-properties: fill;
+  }
+  
+  /* disconnect sync modal */
+  .deleteData {
+    color: var(--ff-midnight-color-base50) !important;
+  }
+  
+  .deleteOptions {
+    border: thin solid var(--ff-midnight-color-base70) !important;
+  }
+  
+  .searchBarImage,
+  .fxaSyncIllustration {
+    filter: invert(85%);
+  }
+  
+  .spotlight {
+    background-color: var(--ff-midnight-color-base92) !important;
+  }
+  
+}
+
+
+/* ---------------------------------------------------------------
+// About:Credits
+// -------------------------------------------------------------*/
+
+@-moz-document 
+  url-prefix("about:credits"), 
+  url-prefix("https://www.mozilla.org/credits/") {
+    html {
+      background: var(--ff-midnight-color-base) !important;
+    }
+    
+    body {
+      color: var(--ff-midnight-color-base30) !important;
+    }
+}
+
+
+/* ---------------------------------------------------------------
+// About:Debugging
+// -------------------------------------------------------------*/
+
+@-moz-document url-prefix("about:debugging") {
+  
+  /* List items */
+  .addon-target-container {
+    background: var(--ff-midnight-color-base95) !important;
+    border-radius: 2px;
+  }
+  
+  /* Checkbox */
+  html input[type="checkbox"] {
+    background-color: var(--ff-midnight-color-base95) !important;
+    background-image: url("chrome://global/skin/in-content/check.svg") !important;
+    box-shadow: 0 1px 1px 0 var(--ff-midnight-color-base95), inset 0 2px 0 0 #0000 !important;
+    fill: var(--ff-midnight-color-accent) !important;
+  }
+  
+  .addon-target-button:disabled {
+    color: var(--ff-midnight-color-base50);  
+  }
+  
+  /* Service workers tab - notification */
+  .service-worker-multi-process {
+    background-color: var(--ff-midnight-color-base120) !important;
+    border-radius: 2px;
+  }
+  
+  .addons-install-error .warning, 
+  .service-worker-multi-process .warning {
+    filter: inherit !important;
+  }
+  
+  .addons-install-error {
+    background-color: var(--ff-midnight-color-notice) !important;
+    color: var(--ff-midnight-color-base) !important;
+  }
+  
+  .addon-target-button {
+    color: var(--ff-midnight-color-accent) !important;
+  }
+  
+  .target-status-stopped {
+    border-color: var(--ff-midnight-color-base50) !important;
+    background-color: var(--ff-midnight-color-base50) !important;
+    border-radius: 2px;
+  }
+  
+  .addon-target-button:enabled:focus,
+  .addon-target-button:enabled:hover {
+    color: var(--ff-midnight-color-accent-dark) !important;
+  }
+  
+  .addon-target-button:enabled:hover:active {
+    color: var(--ff-midnight-color-accent-darker) !important;
+  }
+}
+
+
+/* ---------------------------------------------------------------
+// About:Devtools
+// -------------------------------------------------------------*/
+
+@-moz-document url-prefix("about:devtools") {
+  .external, 
+  .external:hover, 
+  .external:visited, 
+  .external:hover:active {
+    color: var(--ff-midnight-color-accent) !important;
+  }
+}
+
+/* ---------------------------------------------------------------
+// About:WebRTC
+// -------------------------------------------------------------*/
+
+@-moz-document url-prefix("about:webrtc") {
+  html {
+    background: var(--ff-midnight-color-base) !important;
+    color: var(--ff-midnight-color-base30) !important;
+  }
+  
+  #content > div {
+    border-color: var(--ff-midnight-color-base92) !important;
+    background: var(--ff-midnight-color-base95) !important;
+  }
+  
+  /* todo: buttons */
+}
+
+
+/* ---------------------------------------------------------------
+// About:Memory
+// -------------------------------------------------------------*/
+
+@-moz-document url-prefix("about:memory") {
+  html {
+    background: var(--ff-midnight-color-base) !important;
+    color: var(--ff-midnight-color-base30) !important;
+  }
+  
+  div.section,
+  div.opsRow {
+    border-color: var(--ff-midnight-color-base92) !important;
+    background: var(--ff-midnight-color-base95) !important;
+    color: var(--ff-midnight-color-base30) !important;
+  }
+  
+  a {
+    color: var(--ff-midnight-color-accent) !important;
+  }
+  
+  /* todo: buttons */
+}
+
+
+/* ---------------------------------------------------------------
+// About:Performance
+// -------------------------------------------------------------*/
+
+@-moz-document url-prefix("about:performance") {
+  #subprocess-reports {
+    background: var(--ff-midnight-color-base95) !important;
+    border-collapse: collapse !important;
+  }
+  
+  #subprocess-reports td {
+    background: var(--ff-midnight-color-base95) !important;
+  }
+}
+
+
+/* ---------------------------------------------------------------
+// About:Plugins
+// -------------------------------------------------------------*/
+
+@-moz-document url-prefix("about:plugins") {
+  body {
+    background-color: var(--ff-midnight-color-base) !important;
+    color: var(--ff-midnight-color-base30) !important;
+    font: inherit !important;
+  }
+  
+  .notice {
+    background: var(--ff-midnight-color-base95) !important;
+    border: 1px solid var(--ff-midnight-color-base80) !important;
+    border-radius: 3px;
+  }
+  
+  a {
+    color: var(--ff-midnight-color-accent) !important;
+  }
+  
+  th {
+    background-color: var(--ff-midnight-color-base110) !important;
+    color: var(--ff-midnight-color-base30) !important;
+  }
+  
+  table, th, td {
+    border-color: var(--ff-midnight-color-base90) !important;
+    border-collapse: collapse !important; 
+  }
+}
+
+/* ---------------------------------------------------------------
+// About:Studies
+// -------------------------------------------------------------*/
+
+@-moz-document url-prefix("about:studies") {
+  :root {
+    --icon-background-disabled-color: var(--ff-midnight-color-base50) !important;
+    --body-text-disabled-color: var(--ff-midnight-color-base50) !important;
+    --info-box-background-color: var(--ff-midnight-color-base120) !important;
+    --info-box-border-color: var(--ff-midnight-color-base95) !important;
+    --study-status-active-color: var(--ff-midnight-color-accent-dark) !important;
+    --study-status-disabled-color: var(--ff-midnight-color-base50) !important;
+  }
+}
+
+
+/* ---------------------------------------------------------------
+// About:Cache
+// About:Buildconfig
+// -------------------------------------------------------------*/
+
+@-moz-document url-prefix("about:cache"),url-prefix("about:buildconfig") {
+  html {
+    background: var(--ff-midnight-color-base) !important;
+    color: var(--ff-midnight-color-base30) !important;
+    font-size: 14px !important;
+  }
+  
+  a {
+    color: var(--ff-midnight-color-accent) !important;
+  }
+}
+
+/* ---------------------------------------------------------------
+// About:Telemetry
+// -------------------------------------------------------------*/
+
+@-moz-document url-prefix("about:telemetry") {
+  .dropdown {
+    fill: var(--ff-midnight-color-base10) !important;
+  }
+  
+  #ping-picker {
+    background-color: var(--ff-midnight-color-base90) !important;
+  }
+  
+  
+  #page-description {
+    border: 1px solid var(--ff-midnight-color-base70) !important;
+  }
+   
+  .bar-inner {
+    background-color: var(--ff-midnight-color-accent) !important;
+    border: 1px solid var(--ff-midnight-color-accent) !important;
+  }
+}
+
+/* ---------------------------------------------------------------
+// Reader view
+//
+// Avoid adding ID selector rules in this style sheet, since they 
+// could match elements in the article content.
+// -------------------------------------------------------------*/
+
+@-moz-document url-prefix("about:reader") {
+  body.light {
+    color: var(--ff-midnight-color-base90) !important;
+    background-color: var(--ff-midnight-color-base10) !important;
+  }
+  
+  body.dark {
+    color: var(--ff-midnight-color-base30) !important;
+    background-color: var(--ff-midnight-color-base) !important;
+  }
+  
+  body.dark *::-moz-selection {
+    background-color: var(--ff-midnight-color-base120) !important;
+    color: var(--ff-midnight-color-base10) !important;
+  }
+  
+  body.dark a::-moz-selection {
+    color: var(--ff-midnight-color-base30) !important;
+  }
+  
+  /* Expanded font-stack */
+  body.sans-serif {
+    font-family: "Avenir Next", Helvetica, Arial, sans-serif !important;
+  }
+  
+  body.serif,
+  body.serif .remove-button  {
+    font-family: Georgia, "Times New Roman", serif;
+  }
+  
+  .light-button {
+    color: var(--ff-midnight-color-base90) !important;
+    background-color: var(--ff-midnight-color-base10) !important;
+  }
+  
+  .dark-button {
+    color: var(--ff-midnight-color-base30) !important;
+    background-color: var(--ff-midnight-color-base) !important;
+  }
+    
+  /*
+    .sans-serif-button {
+      font-family: "Avenir Next", Helvetica, Arial, sans-serif !important;
+    }
+  */
+    
+  /*
+    .serif-button {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+  */
+
+  
+  /* Header */
+  .domain {
+    color: var(--ff-midnight-color-accent) !important;
+  }
+  
+  /* Controls toolbar */
+  .toolbar {
+    background-color: var(--ff-midnight-color-base110) !important;
+    border-right: 1px solid var(--ff-midnight-color-base120) !important;
+  }
+  
+  .button {
+    color: var(--ff-midnight-color-base30) !important;
+    background-color: var(--ff-midnight-color-base110) !important;
+  }
+  
+  .toolbar .button {
+    border-right: 1px solid var(--ff-midnight-color-base120) !important;
+    border-bottom: 1px solid var(--ff-midnight-color-base) !important;
+  }
+  
+  
+  /* Popup */
+  /* These styles are unchanged for now */
+  .dropdown-popup {
+    background-color: #fbfbfb;
+    border: 1px solid #b5b5b5;
+    box-shadow: 0 1px 3px var(--ff-midnight-color-base120) !important;
+  }
+  
+  .font-type-buttons > button,
+  .font-size-buttons > button,
+  .content-width-buttons > button,
+  .line-height-buttons > button {
+    border-left: 1px solid #B5B5B5;
+    border-bottom: 1px solid #B5B5B5;
+  }
+  
+  .font-type-buttons > button:active:hover,
+  .font-type-buttons > button.selected,
+  .color-scheme-buttons > button:active:hover,
+  .color-scheme-buttons > button.selected {
+    box-shadow: inset 0 -3px 0 0 #fc6420;
+  }
+  
+  .font-type-buttons > button:active:hover,
+  .font-type-buttons > button.selected {
+    border-bottom: 1px solid #FC6420;
+  }
+  
+  /* Make the serif button content the same size as the sans-serif button content. */
+  .font-type-buttons > button > .description {
+    color: #666;
+  }
+  
+  .button:hover,
+  .font-size-buttons > button:hover,
+  .font-type-buttons > button:hover,
+  .content-width-buttons > button:hover,
+  .line-height-buttons > button:hover {
+    background-color: #ebebeb;
+  }
+  
+  .dropdown.open,
+  .button:active,
+  .font-size-buttons > button:active,
+  .font-size-buttons > button.selected,
+  .content-width-buttons > button:active,
+  .content-width-buttons > button.selected,
+  .line-height-buttons > button:active,
+  .line-height-buttons > button.selected {
+    background-color: #dadada;
+  }
+  
+  /* Toolbar icons */
+  .close-button {
+    fill: var(--ff-midnight-color-base30) !important;
+  }
+  
+  .close-button:hover,
+  .close-button:hover:active  {
+    fill: var(--ff-midnight-color-base10) !important;
+    background-color: var(--ff-midnight-color-base120) !important;
+    border-bottom: 1px solid var(--ff-midnight-color-base120) !important;
+    border-right: 1px solid var(--ff-midnight-color-base120) !important;
+  }
+  
+  .moz-reader-content a:link,
+  .moz-reader-content a:link:hover,
+  .moz-reader-content a:link:active {
+    color: var(--ff-midnight-color-accent) !important;
+  }
+  
+  .moz-reader-content a:visited {
+    color: var(--ff-midnight-color-base50) !important;
+  }
+}

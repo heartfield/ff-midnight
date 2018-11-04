@@ -1,0 +1,53 @@
+@-moz-document url-prefix(view-source:) {
+  :root {
+    background-color: var(--ff-midnight-color-base) !important;
+    color: var(--ff-midnight-color-base30) !important;
+  }
+  
+  pre[id]:before,
+  span[id]:before {
+    color: var(--ff-midnight-color-base30) !important;
+  }
+  
+  .highlight .end-tag,
+  .highlight .start-tag {
+    color: var(--ff-midnight-color-highlight-purple) !important;
+  }
+  
+  .highlight .comment {
+    color: var(--ff-midnight-color-highlight-green) !important;
+  }
+  
+  .highlight .cdata {
+    color: var(--ff-midnight-color-highlight-orchid) !important;
+  }
+  
+  .highlight .doctype {
+    color: var(--ff-midnight-color-highlight-bluegrey) !important;
+  }
+  
+  .highlight .pi {
+    color: var(--ff-midnight-color-highlight-red) !important;
+  }
+  
+  .highlight .entity {
+    color: var(--ff-midnight-color-highlight-salmon) !important;
+  }
+  
+  .highlight .attribute-name {
+    color: var(--ff-midnight-color-base0) !important;
+  }
+  
+  .highlight .attribute-value {
+    color: var(--ff-midnight-color-highlight-blue) !important;
+  }
+  
+  .highlight .markupdeclaration {
+    color: var(--ff-midnight-color-highlight-bluegrey) !important;
+  }
+  
+  .highlight .error,
+  .highlight .error > :-moz-any(.start-tag,.end-tag,.comment,.cdata,.doctype,.pi,.entity,.attribute-name,.attribute-value) {
+    color: var(--ff-midnight-color-alert) !important;
+  }
+}

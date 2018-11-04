@@ -1,0 +1,18 @@
+/* ###############################################################
+//
+//    About:Home - Custom background image
+//
+// 1. Add an image to the /chrome/img/ folder and set the path to it below 
+// 2. Recommended: Use the same image as your desktop wallpaper
+// 3. Recommended Firefox settings: Preferences > Home > New Windows and Tabs > Set both to Firefox Home
+// 4. Optional Firefox settings: Preferences > Home > Firefox Home Content > Uncheck all unwanted
+//
+// #############################################################*/
+
+body.activity-stream {
+  background-image: url("./../../img/ff-midnight-bg-0.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  min-height: 100vh !important;   
+}

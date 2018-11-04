@@ -1,0 +1,111 @@
+@-moz-document 
+  url-prefix("about:"),
+  url-prefix("chrome://") {
+    
+  /* ---------------------------------------------------------------
+  // Tree list box
+  // -------------------------------------------------------------*/
+  
+  tree {
+    background-color: var(--ff-midnight-color-base) !important;
+    color: var(--ff-midnight-color-base30) !important;
+  }
+  
+  tree:-moz-focusring {
+    border: 1px solid var(--ff-midnight-color-base70) !important;
+  }
+
+  treechildren::-moz-tree-row {
+    background-color: var(--ff-midnight-color-base) !important; /*  -moz-field; */
+  }  
+  
+  treechildren::-moz-tree-row(multicol, odd) {
+    background-color: var(--ff-midnight-color-base95) !important; /* -moz-oddtreerow; */
+  }
+  
+  treechildren::-moz-tree-row(selected) {
+    background-color: var(--ff-midnight-color-base90) !important;
+  }
+  
+  treechildren::-moz-tree-row(selected, focus) {
+    background-color: var(--ff-midnight-color-base90) !important;
+    color: var(--ff-midnight-color-base10) !important;
+  }
+  
+  tree[seltype="cell"] > treechildren::-moz-tree-cell(active, selected) {
+    background-color: var(--ff-midnight-color-base90) !important;
+  }
+  
+  tree[seltype="cell"] > treechildren::-moz-tree-cell-text(active, selected) {
+    color: var(--ff-midnight-color-base10) !important;
+  }
+  
+  tree[seltype="text"] > treechildren::-moz-tree-cell-text(active, selected) {
+    background-color: var(--ff-midnight-color-base90) !important;
+    color: var(--ff-midnight-color-base10) !important;
+  }
+  
+  treechildren::-moz-tree-cell-text(selected, focus) {
+    color: var(--ff-midnight-color-base10) !important;
+  }
+  
+  tree[seltype="cell"] > treechildren::-moz-tree-cell(active, selected, focus) {
+    background-color: var(--ff-midnight-color-base90) !important;
+  }
+  
+  tree[seltype="cell"] > treechildren::-moz-tree-cell-text(active, selected, focus) {
+    color: var(--ff-midnight-color-base10) !important;
+  }
+  
+  tree[seltype="text"] > treechildren::-moz-tree-cell-text(active, selected, focus) {
+    background-color: var(--ff-midnight-color-base90) !important;
+    color: var(--ff-midnight-color-base10) !important;
+  }
+  
+  treecol[dragging="true"] {
+    color: var(--ff-midnight-color-base10) !important;
+  }
+  
+  treecol:not([hideheader="true"]), 
+  treecolpicker {
+    color: var(--ff-midnight-color-base30) !important;
+    background-color: var(--ff-midnight-color-base110) !important;
+  }
+  
+  treecol:not([hideheader="true"]) > .treecol-sortdirection[sortDirection] {
+    fill: var(--ff-midnight-color-accent) !important;
+  }
+  
+  /*   Treecol header seperator color */
+  treecol:not([hideheader="true"]):not(:first-child), 
+  treecolpicker {
+    border-image: linear-gradient(transparent 0%, transparent 20%, var(--ff-midnight-color-base50) 20%, var(--ff-midnight-color-base50) 80%, transparent 80%, transparent 100%) 1 1 !important;
+  }
+  
+  @media screen and (-moz-os-version:windows-win7) {
+    treechildren {
+      --treechildren-outline: none!important
+    }
+  }
+  
+  /* ---------------------------------------------------------------
+  // Tabs
+  // -------------------------------------------------------------*/
+  
+  tab {
+    color: var(--ff-midnight-color-base10) !important;
+  }
+  
+  tab:hover {
+    color: var(--ff-midnight-color-base5) !important;
+  }
+  
+  tab[selected] {
+    color: var(--ff-midnight-color-accent) !important;
+  }
+  
+  tab:-moz-focusring > .tab-middle > .tab-text {
+    outline: 2px solid transparent !important;
+  }
+
+}

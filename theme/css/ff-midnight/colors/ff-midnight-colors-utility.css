@@ -1,0 +1,20 @@
+/* ---------------------------------------------------------------
+// Utility Colors
+// -------------------------------------------------------------*/
+
+:root { 
+  --ff-midnight-color-alert:              #C23636;
+  --ff-midnight-color-ok:                 #78D348;
+  --ff-midnight-color-notice:             #E7D73B;
+  
+  --ff-midnight-color-highlight-green:    #86DE74;
+  --ff-midnight-color-highlight-blue:     #75BFFF;
+  --ff-midnight-color-highlight-purple:   #B98EFF;
+  --ff-midnight-color-highlight-red:      #FE6262;
+  --ff-midnight-color-highlight-yellow:   #FFF89E;
+  --ff-midnight-color-highlight-bluegrey: #5E88B0;
+  --ff-midnight-color-highlight-salmon:   #DEA174;
+  --ff-midnight-color-highlight-orange:   #D96629;
+  --ff-midnight-color-highlight-pink:     #DF80FF;
+  --ff-midnight-color-highlight-orchid:   #CC0066;
+}

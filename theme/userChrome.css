@@ -1,0 +1,40 @@
+/* ###############################################################
+|
+| FF Midnight Theme for Firefox
+|
+| ############################################################# */
+
+
+/* ###############################################################
+//
+// 1. Choose a color palette below or add your own
+// 2. Required Firefox setting: Preferences > Themes > Dark Theme
+//
+// -  Don't use the default xul @namespace in this file
+//
+// #############################################################*/
+
+
+/* ---------------------------------------------------------------
+// 1. FF Midnight - Colors Themes
+// -------------------------------------------------------------*/
+
+@import "./css/ff-midnight/colors/ff-midnight-colors-cosmos.css";
+/* @import "./css/ff-midnight/colors/ff-midnight-colors-galaxy.css"; */
+/* @import "./css/ff-midnight/colors/ff-midnight-colors-redshift.css"; */
+
+/* Required */
+@import "./css/ff-midnight/colors/ff-midnight-colors-utility.css";
+
+/* ---------------------------------------------------------------
+// FF Midnight - Userchrome styles
+// -------------------------------------------------------------*/
+
+@import "./css/ff-midnight/shared-styles.css";
+@import "./css/ff-midnight/ff-midnight-userchrome.css";
+
+@import "./css/ff-midnight/page-info.css";
+
+/* ---------------------------------------------------------------
+// End FF Midnight Theme
+// -------------------------------------------------------------*/

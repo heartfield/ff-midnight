@@ -1,0 +1,79 @@
+/* ###############################################################
+|
+| FF Midnight Theme for Firefox
+|
+| ############################################################# */
+
+
+/* ###############################################################
+//
+// 1. Choose a color palette below or add your own
+// 2. Optional: Add a background image to About:Home
+// 3. Optional: Ublock Origin theme
+// 4. Optional: Firefox Multi-account Containers theme
+// 5. Required Firefox setting: Preferences > Themes > Dark Theme
+//
+// #############################################################*/
+
+
+/* ---------------------------------------------------------------
+// 1. FF Midnight - Colors Themes
+// -------------------------------------------------------------*/
+
+@import "./css/ff-midnight/colors/ff-midnight-colors-cosmos.css";
+/* @import "./css/ff-midnight/colors/ff-midnight-colors-galaxy.css"; */
+/* @import "./css/ff-midnight/colors/ff-midnight-colors-redshift.css"; */
+
+/* Required */
+@import "./css/ff-midnight/colors/ff-midnight-colors-utility.css";
+
+/* ---------------------------------------------------------------
+// 2. Background image for About:Home
+
+// Required configuration: see instructions in ff-midnight-background-image.css
+// -------------------------------------------------------------*/
+
+@import "./css/ff-midnight/background-image.css";
+
+
+/* ---------------------------------------------------------------
+// All Firefox About: pages
+// -------------------------------------------------------------*/
+
+@import "./css/ff-midnight/shared-styles.css";
+@import "./css/ff-midnight/about-pages.css";
+
+
+/* ---------------------------------------------------------------
+// 3. Ublock Origin Extension
+//
+// Required configuration: set UUID in ff-midnight-ublock.css
+// -------------------------------------------------------------*/
+
+@import "./css/ff-midnight/extensions/ublock-origin.css";
+
+/* ---------------------------------------------------------------
+// 4. Firefox Multi-account Containers Extension
+//
+// Required configuration: set UUID in ff-midnight-multi-account-containers.css
+// -------------------------------------------------------------*/
+
+@import "./css/ff-midnight/extensions/multi-account-containers.css";
+
+/* ---------------------------------------------------------------
+// PDF Viewer
+// -------------------------------------------------------------*/
+
+@import "./css/ff-midnight/pdf-viewer.css";
+
+
+/* ---------------------------------------------------------------
+// View Source
+// -------------------------------------------------------------*/
+
+@import "./css/ff-midnight/view-source.css";
+
+
+/* ---------------------------------------------------------------
+// End FF Midnight Theme
+// -------------------------------------------------------------*/

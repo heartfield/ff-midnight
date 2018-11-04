@@ -1,0 +1,29 @@
+/* ###############################################################
+|
+|  ** REDSHIFT ** (Dark Brown)
+|
+| - Color-base is the main theme color and has a color palette from light (0) to dark (120)
+| - Color-accent is for links, highlights, etc.
+|
+| ############################################################# */
+
+:root {
+  --ff-midnight-color-base0:         #F0EBE7;
+  --ff-midnight-color-base5:         #EAE1DA;        
+  --ff-midnight-color-base10:        #DCD4CD;
+  --ff-midnight-color-base30:        #A39489;
+  --ff-midnight-color-base50:        #615448;
+  --ff-midnight-color-base70:        #56483D;
+  --ff-midnight-color-base80:        #4E4239;
+  --ff-midnight-color-base90:        #443930;
+  --ff-midnight-color-base92:        #3E3329;
+  --ff-midnight-color-base95:        #352B22;
+  --ff-midnight-color-base:          #30261D; /* main theme color */
+  --ff-midnight-color-base110:       #29211A;
+  --ff-midnight-color-base120:       #1F1914;
+
+  --ff-midnight-color-accent-light:  #E5AA93;
+  --ff-midnight-color-accent:        #E68157; 
+  --ff-midnight-color-accent-dark:   #DB561F;
+  --ff-midnight-color-accent-darker: #C43F09;
+}
