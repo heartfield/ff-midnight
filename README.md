@@ -46,6 +46,11 @@ or go to `about:profiles` > Root Directory > Show in Finder (MacOS) or Open Fold
 
 > View Source page, About:Addons page, Page info dialog window
 
+
+![FF Midnight Cosmos palette](preview/ff-midnight-cosmos-palette.png)
+![FF Midnight Galaxy palette](preview/ff-midnight-galaxy-palette.png)
+![FF Midnight Redshift palette](preview/ff-midnight-redshift-palette.png)
+
 ## 👯‍♀️ Contributions
 
 This theme is tested on MacOS but it should work fine on Windows and Linux. If you find any bugs or have suggestions all feedback is welcome.
