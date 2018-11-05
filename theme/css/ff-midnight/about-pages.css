@@ -488,7 +488,7 @@ body.activity-stream.dark-theme .context-menu > ul > li > a:-moz-any(:focus, :ho
   }
   
   .extension-controlled {
-    background: var(--grey-80) !important;
+    background: var(--ff-midnight-color-base80) !important;
     color: var(--ff-midnight-color-base10) !important;
   }
   
