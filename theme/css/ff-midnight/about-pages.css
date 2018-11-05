@@ -487,8 +487,14 @@ body.activity-stream.dark-theme .context-menu > ul > li > a:-moz-any(:focus, :ho
     filter: invert(85%);
   }
   
+  .extension-controlled {
+    background: var(--grey-80) !important;
+    color: var(--ff-midnight-color-base10) !important;
+  }
+  
   .spotlight {
     background-color: var(--ff-midnight-color-base92) !important;
+    color: var(--ff-midnight-color-base10) !important;
   }
   
 }
