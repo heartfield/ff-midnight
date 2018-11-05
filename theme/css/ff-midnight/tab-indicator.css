@@ -1,0 +1,55 @@
+/* Selected-tab line color */ 
+.tab-line[selected=true] {
+  background-color: var(--ff-midnight-color-accent) !important;
+}
+
+/* ---------------------------------------------------------------
+// Multi-account Container Extension - Tab-indicator options
+//
+// Styles: 
+// - Triangle (default)
+// - Dot
+// - Top line 
+// -------------------------------------------------------------*/
+
+.tab-background {
+  position: relative;
+}
+
+/* Triangle */
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-bottom-line {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0 !important;
+  border-style: solid;
+  border-width: 0 14px 14px 0;
+  border-color: transparent var(--identity-tab-color) transparent transparent;
+  background: none !important;
+}
+
+/* Dot */
+/*
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-bottom-line {
+  background: var(--identity-tab-color) !important;
+  height: 7px !important;
+  width: 7px;
+  position: absolute;
+  top: calc(50% - 3.5px);
+  right: 4px;
+  border-radius: 50%;
+}
+*/
+
+
+/* Top line, over the default line */
+/*
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-bottom-line {
+  background: linear-gradient(to right, transparent 0%, var(--identity-tab-color) 0%, var(--identity-tab-color) 100%, transparent 100%) !important;
+  height: 2px;
+  top: calc(-100% + 2px);
+  position: absolute;
+  left: 0;
+}
+*/

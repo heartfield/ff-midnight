@@ -33,6 +33,7 @@
 @import "./css/ff-midnight/shared-styles.css";
 @import "./css/ff-midnight/ff-midnight-userchrome.css";
 
+@import "./css/ff-midnight/tab-indicator.css";
 @import "./css/ff-midnight/page-info.css";
 
 /* ---------------------------------------------------------------
