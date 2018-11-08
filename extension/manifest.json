@@ -1,10 +1,10 @@
 {
 
   "manifest_version": 2,
-  "name": "FF-midnight",
+  "name": "FF Midnight",
   "version": "1.0",
 
-  "description": "Todo",
+  "description": "A comprehensive dark theme for Firefox",
 
   "icons": {
     "48": "icons/icon.svg",
@@ -27,7 +27,7 @@
 
   "applications": {
     "gecko": {
-      "id": "heartfield@gmail.com",
+      "id": "ff-midnight@ff-midnight.com",
     }
   }
 
