@@ -20,7 +20,7 @@ Some styles and colors may not be optimal for accessibility but are based on per
 
 ## 🛠 Extension in development
 
-The `extension` part of this repo is currently in development. The goal is that the FF Midnight can be installed as an extension in the future. This should make installation and updating easier and will allow for the different options to be configured in a preference panel. Until the extension is finished you can manually install the theme by following the instructions below. Stay tuned!
+An extension of FF Midnight is currently in development. The goal is to have FF Midnight hosted on addons.mozilla.org. That should make installing and updating easier and will allow for the different options to be configured in a preference panel. Until the extension is finished you can manually install the theme by following the instructions below. Stay tuned!
 
 ## ⚙️ Installation
 
