@@ -24,6 +24,7 @@
   --toolbarbutton-icon-fill-attention: var(--ff-midnight-color-accent) !important;
   
   /* urlbar */
+  --toolbar-bgcolor: var(--ff-midnight-color-base) !important; 
   --lwt-toolbar-field-color: var(--chrome-color);
   --toolbar-field-background-color: var(--ff-midnight-color-base) !important;
   --lwt-toolbar-field-background-color: var(--ff-midnight-color-base) !important;
