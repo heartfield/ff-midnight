@@ -139,6 +139,10 @@ sidebarheader {
   background: var(--ff-midnight-color-base110) !important;
 }
 
+.sidebar-panel[lwt-sidebar] {
+  background-color: var(--ff-midnight-color-base110) !important;
+}
+
 /* section of the panel with searchbox */
 #bookmarksPanel,
 #history-panel {
