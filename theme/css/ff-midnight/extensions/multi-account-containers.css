@@ -132,6 +132,10 @@
   legend {
     color: var(--ff-midnight-color-base30) !important;
   }
+  
+  button .container-name {
+    color: var(--ff-midnight-color-base) !important;
+  }
 
   .panel-footer {
     background: var(--ff-midnight-color-base110) !important;
