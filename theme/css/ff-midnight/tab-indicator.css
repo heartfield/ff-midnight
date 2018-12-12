@@ -1,4 +1,5 @@
 /* Selected-tab line color */ 
+.tab-line[multiselected],
 .tab-line[selected=true] {
   background-color: var(--ff-midnight-color-accent) !important;
 }
