@@ -57,6 +57,25 @@
     --in-content-table-border-dark-color: var(--ff-midnight-color-base92) !important;
     --in-content-table-header-background: var(--ff-midnight-color-base110) !important;
     
+    --blue-50: var(--ff-midnight-color-accent) !important;
+    --blue-50-a30: var(--ff-midnight-color-accent) !important;
+    --grey-20: #ededf0;
+    --grey-30: var(--ff-midnight-color-base70) !important;
+    --grey-60: #4a4a4f;
+    --grey-90: #0c0c0d;
+    --grey-90-a10: rgba(12, 12, 13, 0.1);
+    --grey-90-a20: rgba(12, 12, 13, 0.2);
+    --grey-90-a30: rgba(12, 12, 13, 0.3);
+    --yellow-50: var(--ff-midnight-color-highlight-yellow) !important;
+    --yellow-90: var(--ff-midnight-color-notice) !important;
+    
+    --shadow-10: 0 1px 4px var(--grey-90-a10);
+    --card-shadow: var(--shadow-10);
+    --card-outline-color: var(--grey-30);
+    --card-shadow-hover: var(--card-shadow), 0 0 0 5px var(--card-outline-color);
+    --card-shadow-focus: 0 0 0 2px var(--blue-50), 0 0 0 6px var(--blue-50-a30);
+    
+    
   }
   
   /* general text selection */
@@ -433,6 +452,15 @@ body.activity-stream.dark-theme .context-menu > ul > li > a:-moz-any(:focus, :ho
   .addon-view[pending="disable"] .pending, 
   .addon-view[pending="uninstall"] .pending {
     color: var(--ff-midnight-color-base10) !important;
+  }
+  
+  .category-badge {
+    background-color: var(--ff-midnight-color-accent-dark) !important;
+    color: var(--ff-midnight-color-base0) !important;
+  }
+  
+  .update-info-container .update-available-notice {
+    color: var(--ff-midnight-color-accent-dark) !important;
   }
 }
 
