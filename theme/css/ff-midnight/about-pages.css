@@ -218,6 +218,12 @@
     color: var(--ff-midnight-color-base50) !important;  
   }
   
+  .dialogTitleBar {
+    background-color: var(--ff-midnight-color-base95) !important;
+    border-bottom: 1px solid var(--ff-midnight-color-base90) !important;
+  }
+  
+  
   /* update history dialog */
   #historyItems { 
     -moz-appearance: none !important;
@@ -227,6 +233,13 @@
   #sanitizeEverythingWarningBox {
     background-color: var(--ff-midnight-color-base90) !important;
     border: 1px solid var(--ff-midnight-color-base70) !important;
+  }
+  
+  
+  /* Message bar */
+  .message-bar {
+    background-color: var(--ff-midnight-color-highlight-yellow) !important;
+    color: var(--ff-midnight-color-base80) !important;
   }
   
 } /* End main about: pages moz-document wrapper */
@@ -524,7 +537,31 @@ body.activity-stream.dark-theme .context-menu > ul > li > a:-moz-any(:focus, :ho
     background-color: var(--ff-midnight-color-base92) !important;
     color: var(--ff-midnight-color-base10) !important;
   }
+ 
+  description.indent, .indent > description {
+    color: var(--ff-midnight-color-base50) !important;
+  }
   
+  
+  /* Privacy settings */
+  .content-blocking-category {
+    border: 1px solid var(--ff-midnight-color-base90) !important;
+    background-color: var(--ff-midnight-color-base110) !important;
+  }
+  
+  .content-blocking-category.selected {
+    border: 1px solid var(--ff-midnight-color-accent) !important;
+    background-color: var(--ff-midnight-color-base92) !important;
+  }
+  
+  .content-blocking-warning {
+    background-color: var(--ff-midnight-color-base) !important;
+   }
+   
+   #trackingGroup description.indent, #trackingGroup .indent > description {
+    color: var(--ff-midnight-color-base20) !important;
+  } 
+    
 }
 
 
