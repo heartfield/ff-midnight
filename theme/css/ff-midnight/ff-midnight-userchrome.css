@@ -333,6 +333,30 @@ tree#bookmarks-view:-moz-focusring {
   
 }
 
+
+/* ---------------------------------------------------------------
+// Panels, Arrowpanels
+// -------------------------------------------------------------*/
+
+
+.panel-footer > button:not([disabled])[default] {
+  color: var(--ff-midnight-color-base120) !important;
+  background-color: var(--ff-midnight-color-accent-dark) !important;
+}
+
+.panel-footer > button:not([disabled])[default]:hover {
+    background-color: var(--ff-midnight-color-accent-darker) !important;
+}
+
+.panel-footer > button:not([disabled])[default]:hover:active {
+  background-color: var(--ff-midnight-color-accent-darker) !important;
+}
+
+
+:root[lwt-popup-brighttext] panel .text-link {
+    color: var(--ff-midnight-color-accent) !important;
+}
+
 /* ---------------------------------------------------------------
 // Common Dialog
 // -------------------------------------------------------------*/
