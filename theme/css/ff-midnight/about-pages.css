@@ -712,6 +712,48 @@ body.activity-stream.dark-theme .context-menu > ul > li > a:-moz-any(:focus, :ho
 }
 
 /* ---------------------------------------------------------------
+// About:Serviceworkers
+// -------------------------------------------------------------*/
+
+@-moz-document url-prefix("about:serviceworkers") {
+  html {
+    background: var(--ff-midnight-color-base) !important;
+    color: var(--ff-midnight-color-base30) !important;
+  }
+  
+  a {
+    color: var(--ff-midnight-color-accent) !important;
+  }
+  
+  a:visited {
+    color: var(--ff-midnight-color-accent-darker) !important;
+  }
+  
+  hr {
+    border-bottom: 1px solid var(--ff-midnight-color-base90) !important;
+    height: 0;
+    border-top: 0;
+  }
+  
+  button {
+    -moz-appearance: none;
+    background: var(--ff-midnight-color-base110) !important;
+    color: var(--ff-midnight-color-base30) !important;
+    padding: 10px 7px;
+    margin: 10px 10px 10px 0;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: var(--ff-midnight-color-base120) !important;
+  }
+  
+}
+  
+
+
+/* ---------------------------------------------------------------
 // About:Studies
 // -------------------------------------------------------------*/
 
@@ -726,6 +768,46 @@ body.activity-stream.dark-theme .context-menu > ul > li > a:-moz-any(:focus, :ho
   }
 }
 
+/* ---------------------------------------------------------------
+// About:Sync-log
+// -------------------------------------------------------------*/
+
+@-moz-document url-prefix("about:sync-log") {
+  :root {
+    background: var(--ff-midnight-color-base) !important;
+    color: var(--ff-midnight-color-base30) !important;
+    font: 14px message-box !important;
+  }
+  
+  body {
+    background: var(--ff-midnight-color-base110) !important;
+    border: 1px solid var(--ff-midnight-color-base90) !important;
+    color: var(--ff-midnight-color-base30) !important;
+  }
+  
+  h1 {
+    font-size: 120% !important;
+    border-bottom: 1px solid var(--ff-midnight-color-base90) !important;
+  }
+  
+  a {
+    padding: 5px 0;
+    display: inline-block;
+    color: var(--ff-midnight-color-accent) !important;
+  }
+  
+  a:visited {
+    color: var(--ff-midnight-color-accent-darker) !important;
+  }
+
+  body > table > tbody > tr:hover {
+    outline: 1px solid var(--ff-midnight-color-base90) !important;
+  }
+  
+  .dir::before, .file > img {
+    filter: invert(50%);
+  }
+}
 
 /* ---------------------------------------------------------------
 // About:Cache
