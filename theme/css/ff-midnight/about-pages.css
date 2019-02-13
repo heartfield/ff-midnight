@@ -107,6 +107,15 @@
     color: var(--ff-midnight-color-base50) !important;
   }
   
+  button:not(.close-icon),
+  select,
+  input[type="color"],
+  menulist,
+  *.numberbox-input::-moz-number-spin-up,
+  *.numberbox-input::-moz-number-spin-down {
+    border: 1px solid var(--ff-midnight-color-base90) !important;
+  }
+  
   /* Focus outline styles */
   button:-moz-focusring,
   menulist:-moz-focusring,
