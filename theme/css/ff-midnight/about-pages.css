@@ -881,6 +881,13 @@ body.activity-stream.dark-theme .context-menu > ul > li > a:-moz-any(:focus, :ho
     fill: var(--ff-midnight-color-base10) !important;
   }
   
+  #ping-type {
+    border: 1px solid var(--ff-midnight-color-base90);
+    background-color: var(--ff-midnight-color-base110);
+    border-radius: 3px;
+    padding: 3px 0;
+  }
+  
   #ping-picker {
     background-color: var(--ff-midnight-color-base90) !important;
   }
