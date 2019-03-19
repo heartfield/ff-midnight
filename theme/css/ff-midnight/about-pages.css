@@ -484,6 +484,11 @@ body.activity-stream.dark-theme .context-menu > ul > li > a:-moz-any(:focus, :ho
   .update-info-container .update-available-notice {
     color: var(--ff-midnight-color-accent-dark) !important;
   }
+  
+  .addon .relnotes-toggle > .button-box > .button-icon {
+    filter: invert(70%);
+  }
+  
 }
 
 /* Get Addons page */
