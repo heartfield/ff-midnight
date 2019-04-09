@@ -1065,3 +1065,29 @@ body.activity-stream.dark-theme .context-menu > ul > li > a:-moz-any(:focus, :ho
     color: var(--ff-midnight-color-base50) !important;
   }
 }
+
+/* ---------------------------------------------------------------
+// About Certification error page
+// -------------------------------------------------------------*/
+
+body.certerror,
+body.caution {
+  --exception-button-container-background: var(--ff-midnight-color-base90);
+}
+
+body.caution {
+  border-color: var(--ff-midnight-color-notice) !important;
+}
+
+body.certerror .advanced-panel,
+body.connectionFailure .advanced-panel,
+body.netInterrupt .advanced-panel,
+body.netTimeout .advanced-panel,
+body.netReset .advanced-panel,
+body.netOffline .advanced-panel,
+body.dnsNotFound .advanced-panel,
+body.malformedURI .advanced-panel,
+body.clockSkewError .advanced-panel {
+  background: var(--ff-midnight-color-base95) !important;
+  border-color: var(--ff-midnight-color-base90) !important;
+}
