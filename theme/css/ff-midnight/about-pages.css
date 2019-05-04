@@ -578,6 +578,15 @@ body.activity-stream.dark-theme .context-menu > ul > li > a:-moz-any(:focus, :ho
     
 }
 
+/* ---------------------------------------------------------------
+// About:studies
+// -------------------------------------------------------------*/
+
+@-moz-document url-prefix("about:studies") {
+  .study-description code {
+    background-color: var(--ff-midnight-color-base120) !important;
+  }
+}
 
 /* ---------------------------------------------------------------
 // About:Credits
