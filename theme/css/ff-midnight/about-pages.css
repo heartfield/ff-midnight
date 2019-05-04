@@ -1100,3 +1100,21 @@ body.clockSkewError .advanced-panel {
   background: var(--ff-midnight-color-base95) !important;
   border-color: var(--ff-midnight-color-base90) !important;
 }
+
+/* ---------------------------------------------------------------
+// Private window
+// -------------------------------------------------------------*/
+
+html.private .search-handoff-button, .search-handoff-button:active, .search-handoff-button:enabled:hover:active {
+  background-color: var(--ff-midnight-color-base70) !important;
+  color: var(--ff-midnight-color-base10) !important;
+}
+
+html.private .search-inner-wrapper .search-handoff-button:hover {
+  background-color: var(--ff-midnight-color-base70) !important;
+}
+
+html.private .search-handoff-button.focused {
+  border: solid 1px var(--ff-midnight-color-accent) !important;
+  box-shadow: 0 0 0 1px var(--ff-midnight-color-accent) !important;
+}
