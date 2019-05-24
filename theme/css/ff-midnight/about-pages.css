@@ -575,6 +575,19 @@ body.activity-stream.dark-theme .context-menu > ul > li > a:-moz-any(:focus, :ho
    #trackingGroup description.indent, #trackingGroup .indent > description {
     color: var(--ff-midnight-color-base20) !important;
   } 
+  
+  .reload-tabs-button {
+    fill: var(--ff-midnight-color-base120) !important;
+    background-color: var(--ff-midnight-color-accent) !important;
+  }
+  
+  .reload-tabs-button:not([disabled="true"]):hover {
+    background-color: var(--ff-midnight-color-accent-darker) !important;
+  } 
+  
+  .reload-tabs-button .button-text {
+    color: var(--ff-midnight-color-base120) !important;
+  }
     
 }
 
