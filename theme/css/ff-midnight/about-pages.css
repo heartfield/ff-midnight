@@ -56,6 +56,7 @@
     --in-content-table-background: var(--ff-midnight-color-base) !important;
     --in-content-table-border-dark-color: var(--ff-midnight-color-base92) !important;
     --in-content-table-header-background: var(--ff-midnight-color-base110) !important;
+    --in-content-deemphasized-text: var(--ff-midnight-color-base50) !important;
     
     --blue-50: var(--ff-midnight-color-accent) !important;
     --blue-50-a30: var(--ff-midnight-color-accent) !important;
