@@ -17,6 +17,11 @@
   position: relative;
 }
 
+/* FF71 > remove spacer for positioning of triangle indicator */
+.tab-background-inner {
+  display: none; 
+}
+
 /* Triangle */
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-bottom-line {
   position: absolute;
