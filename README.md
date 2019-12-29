@@ -8,29 +8,21 @@ FF Midnight styles the complete interface in a dark color scheme, including Side
 
 FF Midnight has 3 different dark color schemes that you can choose from:
 
-- **Cosmos** - A dark blue theme (default)
-- **Galaxy** - A dark blue-gray theme
+- **Galaxy** - A dark blue-gray theme (default)
+- **Cosmos** - A dark blue theme
 - **Redshift** - A dark brown theme
 
-More color schemes wil be added in the future.
-
-### Opinionated styles
-
-Some styles and colors may not be optimal for accessibility but are based on personal preferences. For example the 'flat' urlbar style and custom Tab indicators for Container tabs (find the different options in `tab-indicator.css`).
-
-## 🛠 Extension in development
-
-An extension of FF Midnight is currently in development. The goal is to have FF Midnight hosted on addons.mozilla.org. That should make installing and updating easier and will allow for the different options to be configured in a preference panel. Until the extension is finished you can manually install the theme by following the instructions below. Stay tuned!
+Adding your own color scheme is easy. Use one the existing color scheme files as a starting point and change the colors.
 
 ## ⚙️ Installation
 
-As a prerequisite you should use the default Firefox dark theme. It can be selected on the `about:addons#themes` page. If you don't, parts of the interface may become unreadable after installation.
+As a prerequisite you should use the default Firefox dark theme. It can be selected on the `about:addons#themes` page.
 
 1. Find your Profile folder (Profile folder names are different for everyone):  
 Go to the URL `about:support` > Profile Folder > Show in Finder (MacOS) or Open folder (Windows).  
 Alternatively go to `about:profiles` > Root Directory > Show in Finder (MacOS) or Open Folder (Windows).
 2. Copy the contents of this repository's `theme` folder to the `chrome` folder in your Profile folder. Create the `chrome` folder in your Profile folder if there is none yet.  
-3. Optional: To change the default **Cosmos** color scheme to **Galaxy** or **Redshift** open `userChrome.css` and `userContent.css` and follow the instructions in there. 
+3. Optional: To change the default **Galaxy** color scheme to **Cosmos** or **Redshift** open `userChrome.css` and `userContent.css` and follow the instructions in there. 
 4. Optional: If you have the uBlock Origin and/or Multi-Account Containers extensions installed you can add theme styling to their interfaces as well.  
  Go to `about:debugging#addons` and find and copy the UUID of these addons. Open the CSS files for these addons located in `theme\css\ff-midnight\extensions` and paste the UUID in the correct location (Instructions found in the css file).
 5. Optional: Add a custom background image for the About:Home and About:Newtab pages: Open `background-image.css` and follow the instructions in there. 
