@@ -8,11 +8,11 @@ FF Midnight styles the complete interface in a dark color scheme, including Side
 
 FF Midnight has 3 different dark color schemes that you can choose from:
 
-- **Galaxy** - A dark blue-gray theme (default)
+- **Galaxy** - A dark gray theme (default)
 - **Cosmos** - A dark blue theme
 - **Redshift** - A dark brown theme
 
-Adding your own color scheme is easy. Use one the existing color scheme files as a starting point and change the colors.
+Adding your own color scheme is easy. Use one of the existing color scheme files as a starting point and change the colors.
 
 ## ⚙️ Installation
 
@@ -46,4 +46,4 @@ Alternatively go to `about:profiles` > Root Directory > Show in Finder (MacOS) o
 
 ## 👯‍♀️ Contributions
 
-This theme is tested on MacOS but it should work fine on Windows and Linux. If you find any bugs or have suggestions all feedback is welcome.
+This theme is tested on MacOS but it should work fine on Windows and Linux. If you find any bugs or have suggestions; all feedback is welcome.
