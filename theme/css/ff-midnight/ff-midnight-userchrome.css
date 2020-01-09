@@ -442,3 +442,23 @@ browser[type=content-primary],
 browser[type=content] > html:not(#ublock0-epicker) {
   background: var(--ff-midnight-color-base) !important;
 }
+
+/* ---------------------------------------------------------------
+// Context Menu
+// -------------------------------------------------------------*/
+
+#mainPopupSet menuitem,
+#mainPopupSet menu,
+menupopup:not([id="BMB_bookmarksPopup"]),
+#menupopup[placespopup=true] > hbox,
+menuseparator {
+  -moz-appearance: none !important;
+  background: var(--ff-midnight-color-base95) !important;
+  color: var(--ff-midnight-color-base10) !important;
+  border: none !important;
+  padding: 2px !important;
+}
+
+.menu-right{
+    filter: invert(95%) !important;
+}
