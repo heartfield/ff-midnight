@@ -449,16 +449,24 @@ browser[type=content] > html:not(#ublock0-epicker) {
 
 #mainPopupSet menuitem,
 #mainPopupSet menu,
-menupopup:not([id="BMB_bookmarksPopup"]),
-#menupopup[placespopup=true] > hbox,
+menupopup,
 menuseparator {
   -moz-appearance: none !important;
-  background: var(--ff-midnight-color-base95) !important;
-  color: var(--ff-midnight-color-base10) !important;
+  background: var(--ff-midnight-color-base) !important;
+  color: var(--ff-midnight-color-base0) !important;
   border: none !important;
-  padding: 2px !important;
 }
 
-.menu-right{
+#mainPopupSet menuitem,
+#mainPopupSet menu {
+  padding: 5px !important;
+}
+
+#mainPopupSet menuitem:hover,
+#mainPopupSet menu:hover {
+  background: var(--ff-midnight-color-base95) !important;
+}
+
+.menu-right {
     filter: invert(95%) !important;
 }
