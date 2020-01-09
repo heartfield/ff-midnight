@@ -1,0 +1,29 @@
+/* ###############################################################
+|
+|  ** NEBULA ** (Dark Violet)
+|
+| - Color-base is the main theme color and has a color palette from light (0) to dark (120)
+| - Color-accent is for links, highlights, etc.
+|
+| ############################################################# */
+
+:root {
+  --ff-midnight-color-base0:         #F4F4F5;
+  --ff-midnight-color-base5:         #E0E0E2;        
+  --ff-midnight-color-base10:        #CBCBD0;
+  --ff-midnight-color-base30:        #B6B6BD;
+  --ff-midnight-color-base50:        #A2A2AA;
+  --ff-midnight-color-base70:        #8D8D97;
+  --ff-midnight-color-base80:        #797984;
+  --ff-midnight-color-base90:        #646471;
+  --ff-midnight-color-base92:        #4F4F5F;
+  --ff-midnight-color-base95:        #3B3B4C;
+  --ff-midnight-color-base:          #262639; /* main theme color */
+  --ff-midnight-color-base110:       #1E1E2E;
+  --ff-midnight-color-base120:       #171722;
+  
+  --ff-midnight-color-accent-light:  #E2E3FF;
+  --ff-midnight-color-accent:        #A9AAFF; 
+  --ff-midnight-color-accent-dark:   #7071FF;
+  --ff-midnight-color-accent-darker: #4E4FB3;
+}
