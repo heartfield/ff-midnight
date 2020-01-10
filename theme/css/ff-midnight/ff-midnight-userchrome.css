@@ -453,7 +453,11 @@ menupopup,
 menuseparator {
   -moz-appearance: none !important;
   background: var(--ff-midnight-color-base) !important;
-  color: var(--ff-midnight-color-base0) !important;
+  color: var(--ff-midnight-color-base10) !important;
+  border-color: var(--ff-midnight-color-base92) !important;
+}
+
+menuseparator {
   border: none !important;
 }
 
