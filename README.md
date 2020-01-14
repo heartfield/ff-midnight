@@ -16,17 +16,17 @@ Adding your own color scheme is easy. Use one of the existing color scheme files
 
 ## ⚙️ Installation
 
-As a prerequisite you should use the default Firefox dark theme. It can be selected on the `about:addons#themes` page.
-
-1. Find your Profile folder (Profile folder names are different for everyone):  
+1. As a prerequisite you should use the default Firefox dark theme. It can be selected on the `about:addons#themes` page.
+2. Firefox does not load userChrome.css or userContent.css automatically anymore. To change this go to the `about:config` page, search for `toolkit.legacyUserProfileCustomizations.stylesheets` and set the option to `True`.
+3. Find your Profile folder (Profile folder names are different for everyone):  
 Go to the URL `about:support` > Profile Folder > Show in Finder (MacOS) or Open folder (Windows).  
 Alternatively go to `about:profiles` > Root Directory > Show in Finder (MacOS) or Open Folder (Windows).
-2. Copy the contents of this repository's `theme` folder to the `chrome` folder in your Profile folder. Create the `chrome` folder in your Profile folder if there is none yet.  
-3. Optional: To change the default **Galaxy** color scheme to **Cosmos** or **Redshift** open `userChrome.css` and `userContent.css` and follow the instructions in there. 
-4. Optional: If you have the uBlock Origin and/or Multi-Account Containers extensions installed you can add theme styling to their interfaces as well.  
+4. Copy the contents of this repository's `theme` folder to the `chrome` folder in your Profile folder. Create the `chrome` folder in your Profile folder if there is none yet.  
+5. Optional: To change the default **Galaxy** color scheme to **Cosmos** or **Redshift** open `userChrome.css` and `userContent.css` and follow the instructions in there. 
+6. Optional: If you have the uBlock Origin and/or Multi-Account Containers extensions installed you can add theme styling to their interfaces as well.  
  Go to `about:debugging#addons` and find and copy the UUID of these addons. Open the CSS files for these addons located in `theme\css\ff-midnight\extensions` and paste the UUID in the correct location (Instructions found in the css file).
-5. Optional: Add a custom background image for the About:Home and About:Newtab pages: Open `background-image.css` and follow the instructions in there. 
-6. Restart the browser.
+7. Optional: Add a custom background image for the About:Home and About:Newtab pages: Open `background-image.css` and follow the instructions in there. 
+8. Restart the browser.
 
 
 ## 🌌 Preview
