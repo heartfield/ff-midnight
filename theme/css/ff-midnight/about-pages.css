@@ -537,12 +537,7 @@ body.activity-stream.dark-theme .context-menu > ul > li > a:-moz-any(:focus, :ho
   .deleteOptions {
     border: thin solid var(--ff-midnight-color-base70) !important;
   }
-  
-  .searchBarImage,
-  .fxaSyncIllustration {
-    filter: invert(85%);
-  }
-  
+    
   .extension-controlled {
     background: var(--ff-midnight-color-base80) !important;
     color: var(--ff-midnight-color-base10) !important;
