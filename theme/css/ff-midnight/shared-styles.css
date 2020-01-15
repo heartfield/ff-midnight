@@ -1,6 +1,61 @@
 @-moz-document 
   url-prefix("about:"),
   url-prefix("chrome://") {
+  
+  /* ---------------------------------------------------------------
+  // Context menu
+  // -------------------------------------------------------------*/
+  
+  menupopup,
+  panel {
+    -moz-appearance: none !important;
+    background: var(--ff-midnight-color-base) !important;
+    color: var(--ff-midnight-color-base10) !important;
+    border-radius: 6px;
+  }
+  
+  menu,
+  menuitem,
+  menucaption {
+    -moz-appearance: none !important;
+    -moz-font-smoothing-background-color: var(--ff-midnight-color-base90) !important;
+  }
+  
+  menubar > menu[_moz-menuactive="true"][open="true"] {
+    -moz-appearance: none !important;
+    -moz-font-smoothing-background-color: var(--ff-midnight-color-base90) !important;
+    color: var(--ff-midnight-color-base10) !important;
+  }
+  
+  menu[_moz-menuactive="true"],
+  menuitem[_moz-menuactive="true"] {
+    -moz-font-smoothing-background-color: var(--ff-midnight-color-base10) !important;
+    color: var(--ff-midnight-color-base10) !important;
+    background-color: var(--ff-midnight-color-base90) !important;
+  }
+  
+  menulist > menupopup > menuitem,
+  menulist > menupopup > menucaption,
+  menulist > menupopup > menu {
+    color: var(--ff-midnight-color-base10) !important;
+  }
+  
+  menuseparator {
+    -moz-appearance: none !important;
+    background: var(--ff-midnight-color-base92) !important;
+    padding: 1px 0 0 0 !important;
+  }
+  
+  .menu-right {
+    -moz-appearance: menuarrow;
+  }
+  
+  menulist > menupopup > menu:not([disabled="true"])[selected="true"], 
+  menulist > menupopup > menuitem:not([disabled="true"])[selected="true"] {
+    color: var(--ff-midnight-color-base10) !important;
+    background-color: var(--ff-midnight-color-accent-darker) !important;
+}
+  
     
   /* ---------------------------------------------------------------
   // Tree list box
@@ -13,6 +68,10 @@
   
   tree:-moz-focusring {
     border: 1px solid var(--ff-midnight-color-base70) !important;
+  }
+  
+  #places tree:-moz-focusring {
+    border: 0px solid var(--ff-midnight-color-base70) !important;
   }
 
   treechildren::-moz-tree-row {
@@ -68,8 +127,14 @@
   
   treecol:not([hideheader="true"]), 
   treecolpicker {
+    -moz-appearance: none !important;
     color: var(--ff-midnight-color-base30) !important;
     background-color: var(--ff-midnight-color-base110) !important;
+  }
+  
+  treecol,
+  treecolpicker {
+    padding: 4px !important;
   }
   
   treecol:not([hideheader="true"]) > .treecol-sortdirection[sortDirection] {
@@ -82,10 +147,101 @@
     border-image: linear-gradient(transparent 0%, transparent 20%, var(--ff-midnight-color-base50) 20%, var(--ff-midnight-color-base50) 80%, transparent 80%, transparent 100%) 1 1 !important;
   }
   
+  
+  
   @media screen and (-moz-os-version:windows-win7) {
     treechildren {
       --treechildren-outline: none!important
     }
+  }
+  
+  /* ---------------------------------------------------------------
+  // Bookmarks window
+  // -------------------------------------------------------------*/
+  
+  
+  #main-menubar {
+    background-color: var(--ff-midnight-color-base120) !important;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  
+  #main-menubar > * {
+    color: var(--ff-midnight-color-base10) !important;
+  }
+  
+  #main-menubar > :hover,
+  menubar > menu[_moz-menuactive=true][open=true] {
+    -moz-appearance: none !important;
+    background: var(--ff-midnight-color-base110) !important
+  }
+  
+  
+  #placesToolbar {
+    -moz-appearance: none !important;
+    background-color: var(--ff-midnight-color-base110) !important;
+    border: none !important;
+    border-bottom: 1px solid var(--ff-midnight-color-base95) !important;
+  }
+  
+  #placesToolbar toolbarbutton {
+    -moz-appearance: none !important;
+    background: var(--ff-midnight-color-base95) !important;
+    border-radius: 3px;
+  }
+  
+  #placesToolbar search-textbox {
+    -moz-appearance: none !important;
+    padding: 3px 4px !important;
+    background-color: var(--ff-midnight-color-base95) !important;
+    color: var(--ff-midnight-color-base10) !important;
+    border-radius: 3px;
+  }
+  
+  #placesToolbar > toolbarbutton > .toolbarbutton-icon,
+  #placesToolbar > toolbarbutton[type="menu"] > .toolbarbutton-menu-dropmarker {
+    fill: var(--ff-midnight-color-base10) !important; 
+  }
+  
+  #placesView > splitter {
+    border-color: var(--ff-midnight-color-base70) !important;
+  }
+  
+  #placeContent > treechildren::-moz-tree-cell,
+  #placeContent > treechildren::-moz-tree-column {
+    border-right: 1px solid var(--ff-midnight-color-base70) !important;
+  }
+  
+  .plain {
+    -moz-appearance: none !important;
+  }
+  
+  #detailsDeck {
+    background: var(--ff-midnight-color-base110) !important;
+    border-top: 1px solid var(--ff-midnight-color-base120) !important;
+  }
+  
+  #editBookmarkPanelRows label {
+    color: var(--ff-midnight-color-base30) !important;
+  }
+  
+  #detailsDeck input{
+    -moz-appearance: none;
+    border: 1px solid var(--ff-midnight-color-base90) !important;
+    border-radius: 5px;
+    padding: 3px;
+    background: var(--ff-midnight-color-base95) !important;
+    color: var(--ff-midnight-color-base10) !important;
+  }
+  
+  #editBMPanel_tagsSelectorExpander.expander-down {
+    -moz-appearance: -moz-mac-disclosure-button-closed !important;
+    filter: invert(79%) !important
+  }
+  
+  #editBMPanel_tagsSelectorExpander.expander-up {
+    -moz-appearance: -moz-mac-disclosure-button-open !important;
+    filter: invert(79%) !important
   }
   
   /* ---------------------------------------------------------------
