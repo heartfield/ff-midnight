@@ -13,6 +13,8 @@
   --chrome-selection-color: var(--ff-midnight-color-base0) !important;
   --chrome-selection-background-color: var(--ff-midnight-color-base120) !important;
   
+  --chrome-content-separator-color:  var(--ff-midnight-color-base120) !important;
+  
   /* toolbar button background */
   --toolbarbutton-hover-background: var(--ff-midnight-color-base70) !important;
   --lwt-toolbarbutton-hover-background: var(--ff-midnight-color-base70) !important;
@@ -25,10 +27,11 @@
   
   /* urlbar */
   --toolbar-bgcolor: var(--ff-midnight-color-base) !important; 
-  --lwt-toolbar-field-color: var(--chrome-color);
+  --lwt-toolbar-field-color: var(--chrome-color) !important;
   --toolbar-field-background-color: var(--ff-midnight-color-base) !important;
   --lwt-toolbar-field-background-color: var(--ff-midnight-color-base) !important;
   --toolbar-field-focus: var(--ff-midnight-color-base92) !important;
+  --lwt-toolbar-field-focus-color: var(--chrome-color) !important;
   --lwt-toolbar-field-focus: var(--ff-midnight-color-base92) !important;
   --toolbar-field-border-color: var(--ff-midnight-color-base) !important;
   --lwt-toolbar-field-border-color: var(--ff-midnight-color-base) !important;
@@ -65,6 +68,7 @@
 
 #TabsToolbar, #navigator-toolbox {
   color: var(--ff-midnight-color-base30) !important;
+  
 }
 
 #TabsToolbar .tabbrowser-tab:hover {
@@ -229,7 +233,6 @@ tree#bookmarks-view:-moz-focusring {
   fill: var(--ff-midnight-color-base30) !important;
   -moz-context-properties: fill; 
 }
-
 
 /* ---------------------------------------------------------------
 // Synced tabs - content container

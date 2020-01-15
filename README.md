@@ -16,8 +16,8 @@ Adding your own color scheme is easy. Use one of the existing color scheme files
 
 ## ⚙️ Installation
 
-1. As a prerequisite you should use the default Firefox dark theme. It can be selected on the `about:addons#themes` page.
-2. Firefox does not load userChrome.css or userContent.css automatically anymore. To change this go to the `about:config` page, search for `toolkit.legacyUserProfileCustomizations.stylesheets` and set the option to `True`.
+1. As a prerequisite you should use the Firefox dark theme. It can be selected on the `about:addons#themes` page.
+2. Firefox does not load userChrome.css or userContent.css automatically anymore. To enable this go to the `about:config` page, search for `toolkit.legacyUserProfileCustomizations.stylesheets` and set the option to `True`.
 3. Find your Profile folder (Profile folder names are different for everyone):  
 Go to the URL `about:support` > Profile Folder > Show in Finder (MacOS) or Open folder (Windows).  
 Alternatively go to `about:profiles` > Root Directory > Show in Finder (MacOS) or Open Folder (Windows).
