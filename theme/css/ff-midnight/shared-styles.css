@@ -228,7 +228,7 @@
   #detailsDeck input{
     -moz-appearance: none;
     border: 1px solid var(--ff-midnight-color-base90) !important;
-    border-radius: 5px;
+    border-radius: 3px;
     padding: 3px;
     background: var(--ff-midnight-color-base95) !important;
     color: var(--ff-midnight-color-base10) !important;
