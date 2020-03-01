@@ -92,6 +92,7 @@ body.dirty #refresh:hover {
 
 #firewallContainer > div {
   background-color: var(--ff-midnight-color-base95) !important;
+  margin-top: 0 !important;
 }
 
 #firewallContainer > div:hover {
@@ -99,6 +100,7 @@ body.dirty #refresh:hover {
 }
 
 #firewallContainer > div > span {
+  background-color: transparent !important;
   border-bottom: 1px solid var(--ff-midnight-color-base110) !important;
   color: var(--ff-midnight-color-base10) !important;
 }
@@ -122,54 +124,54 @@ body.dirty #refresh:hover {
 
 #firewallContainer>div.allowed>span:first-of-type:before,
 #firewallContainer.minimized>div.isDomain.totalAllowed>span:first-of-type:before {
-  background-color: rgb(0, 160, 0);
+  background-color: rgb(0, 160, 0) !important;
 }
 
 #firewallContainer.colorBlind>div.allowed>span:first-of-type:before,
 #firewallContainer.colorBlind.minimized>div.isDomain.totalAllowed>span:first-of-type:before {
-  background-color: rgb(255, 194, 57);
+  background-color: rgb(255, 194, 57) !important;
 }
 
 #firewallContainer>div.blocked>span:first-of-type:before,
 #firewallContainer.minimized>div.isDomain.totalBlocked>span:first-of-type:before {
-  background-color: rgb(192, 0, 0);
+  background-color: rgb(192, 0, 0) !important;
 }
 
 #firewallContainer.colorBlind>div.blocked>span:first-of-type:before,
 #firewallContainer.colorBlind.minimized>div.isDomain.totalBlocked>span:first-of-type:before {
-  background-color: rgb(0, 19, 110);
+  background-color: rgb(0, 19, 110) !important;
 }
 
 #firewallContainer>div.allowed.blocked>span:first-of-type:before,
 #firewallContainer.minimized>div.isDomain.totalAllowed.totalBlocked>span:first-of-type:before {
-  background-color: rgb(192, 160, 0);
+  background-color: rgb(192, 160, 0) !important;
 }
 
 
 /* Rule cells */
 
 body.advancedUser #firewallContainer>div>span.allowRule {
-  background-color: rgba(0, 160, 0, 0.3);
+  background-color: rgba(0, 160, 0, 0.3) !important;
 }
 
 body.advancedUser #firewallContainer.colorBlind>div>span.allowRule {
-  background-color: rgba(255, 194, 57, 0.4);
+  background-color: rgba(255, 194, 57, 0.4) !important;
 }
 
 body.advancedUser #firewallContainer>div>span.blockRule {
-  background-color: rgba(192, 0, 0, 0.3);
+  background-color: rgba(192, 0, 0, 0.3) !important;
 }
 
 body.advancedUser #firewallContainer.colorBlind>div>span.blockRule {
-  background-color: rgba(0, 19, 110, 0.4);
+  background-color: rgba(0, 19, 110, 0.4) !important;
 }
 
 body.advancedUser #firewallContainer>div>span.noopRule {
-  background-color: rgba(108, 108, 108, 0.3);
+  background-color: rgba(108, 108, 108, 0.3) !important;
 }
 
 body.advancedUser #firewallContainer.colorBlind>div>span.noopRule {
-  background-color: rgba(96, 96, 96, 0.4);
+  background-color: rgba(96, 96, 96, 0.4) !important;
 }
 
 body.advancedUser #firewallContainer>div>span.ownRule {
@@ -177,19 +179,19 @@ body.advancedUser #firewallContainer>div>span.ownRule {
 }
 
 body.advancedUser #firewallContainer>div>span.allowRule.ownRule {
-  background-color: rgba(0, 160, 0, 1);
+  background-color: rgba(0, 160, 0, 1) !important;
 }
 
 body.advancedUser #firewallContainer.colorBlind>div>span.allowRule.ownRule {
-  background-color: rgba(255, 194, 57, 1);
+  background-color: rgba(255, 194, 57, 1) !important;
 }
 
 body.advancedUser #firewallContainer>div>span.blockRule.ownRule {
-  background-color: rgba(192, 0, 0, 1);
+  background-color: rgba(192, 0, 0, 1) !important;
 }
 
 body.advancedUser #firewallContainer.colorBlind>div>span.blockRule.ownRule {
-  background-color: rgba(0, 19, 110, 1);
+  background-color: rgba(0, 19, 110, 1) !important;
 }
 
 body.advancedUser #firewallContainer>div>span.noopRule.ownRule {
@@ -197,11 +199,11 @@ body.advancedUser #firewallContainer>div>span.noopRule.ownRule {
 }
 
 #actionSelector>span:first-of-type {
-  background-color: rgb(0, 160, 0);
+  background-color: rgb(0, 160, 0) !important;
 }
 
 #actionSelector.colorBlind>span:first-of-type {
-  background-color: rgb(255, 194, 57);
+  background-color: rgb(255, 194, 57) !important;
 }
 
 #actionSelector>span:nth-of-type(2) {
@@ -209,11 +211,11 @@ body.advancedUser #firewallContainer>div>span.noopRule.ownRule {
 }
 
 #actionSelector>span:nth-of-type(3) {
-  background-color: rgb(192, 0, 0);
+  background-color: rgb(192, 0, 0) !important;
 }
 
 #actionSelector.colorBlind>span:nth-of-type(3) {
-  background-color: rgb(0, 19, 110);
+  background-color: rgb(0, 19, 110) !important;
 }
 
 #rulesetTools {
