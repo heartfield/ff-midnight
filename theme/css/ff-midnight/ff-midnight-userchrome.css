@@ -85,22 +85,20 @@
 
 #urlbar,
 .searchbar-textbox {
-  border: 1px solid var(--ff-midnight-color-base) !important;
-  /* box-shadow: 0 1px 4px rgba(0,0,0,.05); */
+  border: none !important;
   box-shadow: none !important; 
 }
 
 #urlbar:hover,
 .searchbar-textbox:hover {
-  border-color: var(--ff-midnight-color-base) !important;
-  /* box-shadow: 0 1px 6px rgba(0,0,0,.1); */
+  border: none !important;
   box-shadow: none !important; 
 }
 
 #urlbar[focused="true"],
 .searchbar-textbox[focused="true"] {
-  border-color: var(--toolbar-field-focus-border-color) !important;
-  box-shadow: 0 0 0 1px var(--toolbar-field-focus-border-color) !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 #urlbar:-moz-lwtheme[focused="true"] input::selection,
