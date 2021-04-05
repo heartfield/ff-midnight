@@ -55,10 +55,11 @@
 /* ---------------------------------------------------------------
 // 4. Firefox Multi-account Containers Extension
 //
+// Disabled; extension has native darkmode
 // Required configuration: set UUID in ff-midnight-multi-account-containers.css
 // -------------------------------------------------------------*/
 
-@import "./css/ff-midnight/extensions/multi-account-containers.css";
+/* @import "./css/ff-midnight/extensions/multi-account-containers.css"; */
 
 /* ---------------------------------------------------------------
 // PDF Viewer
