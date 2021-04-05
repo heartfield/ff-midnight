@@ -107,6 +107,13 @@
   background: var(--ff-midnight-color-base120) !important
 }
 
+#urlbar-search-mode-indicator {
+  background-color: var(--ff-midnight-color-base120) !important;
+  outline-color: var(--ff-midnight-color-base80) !important;
+  color: var(--ff-midnight-color-base10) !important;
+}
+
+
 /* ---------------------------------------------------------------
 // Toolbar
 // -------------------------------------------------------------*/
